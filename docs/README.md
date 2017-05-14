@@ -1,6 +1,15 @@
 # Uncapp't
+<<<<<<< HEAD
 
 [Heroku link][heroku]
+
+[Trello link][trello]
+
+[heroku]: http://www.herokuapp.com
+[trello]: https://trello.com
+=======
+
+[Heroku link][heroku] 
 
 [Trello link][trello]
 
@@ -9,6 +18,35 @@
 
 ## Minimum Viable Product
 
+Uncapp't is a web application inspired by Untapp'd built using Ruby on Rails and React/Redux. By the end of Week 9, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
+
+- [ ] Hosting on Heroku
+- [ ] New account creation, login, and guest/demo login
+- [ ] Production README
+- [ ] User Profile
+  - [ ] User check in feed
+  - [ ] Edit Account
+- [ ] Beer Show Page 
+  - [ ] View specific beer information
+  - [ ] Specific beer check in feed
+  - [ ] Create Check in
+  - [ ] Edit beer
+- [ ] Check-ins
+  - [ ] Continuous global check in feed
+  - [ ] Check-in Comments
+  - [ ] Check-in Likes ("Cheers")
+  
+## Design Docs
+
+
+
+TODO:
+
+>>>>>>> 1ed0ee65723433a9f12545d08aaa35a6053f30e6
+
+## Minimum Viable Product
+
+<<<<<<< HEAD
 Uncapp't is a web application inspired by Untapp'd built using Ruby on Rails and React/Redux. By the end of Week 9, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
 
 - [ ] Hosting on Heroku
@@ -67,3 +105,10 @@ Uncapp't is a web application inspired by Untapp'd built using Ruby on Rails and
 ### Phase 6: User Account Page (2 days | W9D3)
 
 **Objective:** To set up a page showing the logged in user's information, as well as personal beer check ins. 
+=======
+3. Wireframes
+4. React Components
+5. Sample State
+6. DB Schema
+7. API Endpoints
+>>>>>>> 1ed0ee65723433a9f12545d08aaa35a6053f30e6
