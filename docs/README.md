@@ -54,7 +54,7 @@ Uncapp't is a web application inspired by Untapp'd built using Ruby on Rails and
 
 ### Phase 3: Home Page (1.5 days)
 
-**Objective:** To set up a functioning home page with logo links to sign in/ sign up
+**Objective:** To set up a functioning home page with logo and links to sign in/ sign up
 
 ### Phase 4: Check-in Feed (2 days | W2D5)
 
