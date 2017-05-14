@@ -27,6 +27,10 @@ Uncapp't is a web application inspired by Untapp'd built using Ruby on Rails and
   - [ ] Check-in Comments
   - [ ] Check-in Likes ("Cheers")
 
+## Bonus
+
+- [ ] Use Google Maps API to show checkin location on a map.
+
 ## Design Docs
 
 * [View Wireframes][wireframes]
