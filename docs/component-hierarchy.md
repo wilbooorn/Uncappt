@@ -8,7 +8,7 @@
  - Sidebar (?)
 
 **BeersContainer**
-  - Beer Header
+  - BeerHeader
   - BeerIndex
 
 **BeerIndex**
@@ -19,7 +19,7 @@
   - New Beer Form
 
 **CheckinsContainer**
-  - Checkins Header
+  - CheckinsHeader
   - CheckinIndex
 
 **CheckinsIndex**
@@ -29,10 +29,7 @@
 **NewCheckinContainer**
   - New Checkin Form
 
-**NewBeerContainer**
-  - New Beer Form
-
-**UserProfile**
+**ProfileContainer**
   - UserDetail
   - CheckinIndex
 
@@ -45,7 +42,7 @@
 | "/login"                        | "AuthFormContainer"  |
 | "/home"                         | "HomeContainer"      |
 | "/home/beers/"                  | "BeersContainer"     |
-| "/home/beers/:beer_id"          | "ShowBeerContainer"  |
+| "/home/beers/:beer_id"          | "BeersContainer"     |
 | "/home/users/:userId"           | "ProfileContainer"   |
 | "/home/users/:userId/check_ins" | "CheckinsContainer"  |
 | "/home/feed/"                   | "CheckinsContainer"  |
