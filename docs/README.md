@@ -26,23 +26,15 @@ Uncapp't is a web application inspired by Untapp'd built using Ruby on Rails and
   - [ ] Continuous global check in feed
   - [ ] Check-in Comments
   - [ ] Check-in Likes ("Cheers")
+  
+## Design Docs
+
 
 
 TODO:
 
-<!-- show wireframes,
-describe features, and
-outline a development timeline for your application.
 
 
-api-endpoints.md
-component-hierarchy.md
-sample-state.md
-schema.md -->
-
-
-1. Heroku Link
-2. Minimum Viable Product
 3. Wireframes
 4. React Components
 5. Sample State
