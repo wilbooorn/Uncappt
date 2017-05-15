@@ -5,7 +5,7 @@
 [Trello link][trello]
 
 [heroku]: https://uncappt.herokuapp.com/
-[trello]: https://trello.com
+[trello]: https://trello.com/b/j1o3mjDz/uncapp-t
 
 ## Minimum Viable Product
 
