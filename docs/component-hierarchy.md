@@ -44,5 +44,4 @@
 | "/home/beers/"                  | "BeersContainer"     |
 | "/home/beers/:beer_id"          | "BeersContainer"     |
 | "/home/users/:userId"           | "ProfileContainer"   |
-| "/home/users/:userId/check_ins" | "CheckinsContainer"  |
 | "/home/feed/"                   | "CheckinsContainer"  |
