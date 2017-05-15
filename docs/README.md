@@ -56,10 +56,14 @@ Uncapp't is a web application inspired by Untapp'd built using Ruby on Rails and
 
 **Objective:** To build complete beer CRUD, including the models, views and controllers.
 
-### Phase 3: Check-in Feed (2 days | W9D2)
+### Phase 3: Check-in Feed (2 days | W9D1)
 
-**Objective:** To create a view showing global user check-ins of beers.
+**Objective:** To create Check-in CRUD and a view showing global user check-ins of beers.
 
-### Phase 4: User Account Page (2 days | W9D4)
+### Phase 4: Add Check-ins to Beer Show Page (1 day | W9D2)
+
+**Objective:** To add check-in feed for each specific beer to their respective show pages.
+
+### Phase 5: User Account Page (2 days | W9D4)
 
 **Objective:** To set up a page showing the logged in user's information, as well as personal beer check ins.
