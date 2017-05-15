@@ -39,6 +39,8 @@ lon         | float     |
 review      | text      |
 image_url   | string    |
 
+## Bonus
+
 ## checkin_cheers
 column name | data type | details
 ------------|-----------|-----------------------

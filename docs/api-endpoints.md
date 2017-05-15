@@ -90,6 +90,9 @@
 - `DELETE /api/checkins/:id`
 
   - `deletes checkin`
+  
+
+## Bonus
 
 
 ### Checkin Comments

@@ -48,26 +48,22 @@ Uncapp't is a web application inspired by Untapp'd built using Ruby on Rails and
 
 ## Implementation Timeline
 
-### Phase 1: Backend Setup and Front End User Authentication (2 days | W8D4)
+### Phase 1: Backend Setup and Front End User Authentication (2 days | W8D3)
 
-**Objective:** To create a functioning rails project with front-end Authentication
+**Objective:** To create a functioning rails project with front-end Authentication, User signup, and User and demo login
 
-### Phase 2: Models (0.5 days | W8D5)
+### Phase 2: Beer CRUD  (2 days | W8D5)
 
-**Objective:** To build complete beer, check-in, comment, and like(?) models, controllers, and views (Jbuilder)
+**Objective:** To build complete beer CRUD, including the models, views and controllers.
 
-### Phase 3: Home Page (1.5 days)
+### Phase 3: Check-in Feed (2 days | W9D1)
 
-**Objective:** To set up a functioning home page with logo and links to sign in/ sign up
+**Objective:** To create Check-in CRUD and a view showing global user check-ins of beers.
 
-### Phase 4: Check-in Feed (2 days | W2D5)
+### Phase 4: Add Check-ins to Beer Show Page (1 day | W9D2)
 
-**Objective:** To create a view showing global user check-ins of beers.
+**Objective:** To add check-in feed for each specific beer to their respective show pages.
 
-### Phase 5: Beer Detail (2 days | W9D1)
-
-**Objective:** To set up a page showing detailed information for a specific beer, allowing for check-ins, and showing check-ins for the beer.
-
-### Phase 6: User Account Page (2 days | W9D3)
+### Phase 5: User Account Page (2 days | W9D4)
 
 **Objective:** To set up a page showing the logged in user's information, as well as personal beer check ins.
