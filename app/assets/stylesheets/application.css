@@ -29,9 +29,33 @@
    transition: 1s opacity;
  }
 
+ .title{
+   height: 100%;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+ }
+
 h1 {
-  font-size: 50px;
+  font-size: 96px;
   color: white;
-  text-align: center;
   font-family: sans-serif;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.signin-button, .signup-button{
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  margin: 20px;
+  height: 40px;
+  width: 100px;
+  background: transparent;
 }
