@@ -24,7 +24,7 @@ class Splash extends React.Component{
     return (
       <div className="splash">
         <div className="title">
-          <h1>Uncapp't</h1>
+          <h1 className="logo">Uncapp't</h1>
         </div>
 
         <div className="buttons">

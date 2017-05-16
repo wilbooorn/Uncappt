@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 class SignInForm extends React.Component {
   constructor(props){
@@ -29,20 +30,30 @@ class SignInForm extends React.Component {
 
   render(){
     return (
-      <form>
-        <input type="text" id="signin-username"
-          value={this.state.username}
-          onChange={this.handleUsername}>
-        </input>
+      <div className="sign-in-container">
+        <h1>Sign In!</h1>
+        <form className="sign-in-form">
+          <h3>Username</h3>
+          <input type="text" id="signin-username"
+            value={this.state.username}
+            onChange={this.handleUsername}>
+          </input>
 
-        <input type="password" id="signin-password"
-          value={this.state.password}
-          onChange={this.handlePassword}>
-        </input>
+          <h3>Password</h3>
+          <input type="password" id="signin-password"
+            value={this.state.password}
+            onChange={this.handlePassword}>
+          </input>
 
-        <button onClick={this.handleSubmit}>Sign In</button>
+          <button onClick={this.handleSubmit}
+            className="sign-in-button">Sign In</button>
+          
+          <p>Not a member?</p>
+          <Link to="/signup">Sign Up Here </Link>
 
-      </form>
+        </form>
+
+      </div>
     );
   }
 }
