@@ -28,7 +28,6 @@ class SignInForm extends React.Component {
   }
 
   render(){
-    console.log(this.props);
     return (
       <form>
         <input type="text" id="signin-username"
