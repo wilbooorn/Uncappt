@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router';
 
 class Splash extends React.Component{
   constructor(props){
@@ -11,11 +12,12 @@ class Splash extends React.Component{
 
   handleSignIn(e){
     e.preventDefault();
-    alert("Clicked");
+    this.props.history.push("/signin");
   }
 
   handleSignUp(e){
     e.preventDefault();
+    this.props.history.push("/signup");
   }
 
   render(){
