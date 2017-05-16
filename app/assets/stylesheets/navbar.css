@@ -10,16 +10,41 @@
 }
 
 .nav-title {
-  margin: 5px;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 2px;
+}
+
+.nav-tagline{
+  margin: 1px;
+  font-size: 12px;
+}
+.left-side-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .right-side-nav {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .nav-explore {
+  font-weight: bold;
   margin-right: 30px;
+  padding-right: 20px;
+  font-size: 20px;
+  border-right: 2px solid black;
+  cursor: pointer;
+}
+
+.nav-explore:hover, .left-side-nav:hover {
+  text-shadow: 2px 2px black;
+
 }
 
 .nav-profile {
@@ -27,4 +52,5 @@
   height: 40px;
   border-radius: 50%;
   margin: auto 0;
+  cursor: pointer;
 }

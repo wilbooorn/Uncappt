@@ -8,7 +8,11 @@ class NavBar extends React.Component {
   render(){
     return (
       <header className="main-nav">
-        <h1 className="nav-title">UNCAPP'T</h1>
+        <div className="left-side-nav">
+          <h1 className="nav-title">UNCAPP'T</h1>
+          <h3 className="nav-tagline">Happy Hour. Every Hour.</h3>
+        </div>
+        
         <div className="right-side-nav">
           <h3 className="nav-explore">Explore Beers</h3>
           <img className="nav-profile"
