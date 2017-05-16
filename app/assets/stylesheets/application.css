@@ -43,19 +43,20 @@
    transition: 1s opacity;
  }
 
- .errors {
-   color: red;
-   font-weight: bold;
+.errors {
+  color: red;
+  font-weight: bold;
  }
 
- .title{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    position: fixed;
-    align-items: center;
-    justify-content: center;
-    z-index: -1;
+.title{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: -1;
  }
 
 .logo {
@@ -63,6 +64,13 @@
   color: gold;
   font-family: sans-serif;
   font-weight: bold;
+}
+
+.tagline {
+  color: white;
+  font-size: 30px;
+  position: relative;
+  bottom: 100px;
 }
 
 .buttons {

@@ -25,6 +25,7 @@ class Splash extends React.Component{
       <div className="splash">
         <div className="title">
           <h1 className="logo">UNCAPP'T</h1>
+          <h4 className="tagline">Insert Tagline Here</h4>
         </div>
 
         <div className="buttons">
