@@ -36,6 +36,9 @@
     "redux-thunk": "^2.2.0",
     "webpack": "^2.5.1"
   },
+  "devDependencies": {
+    "redux-logger": "^2.8.1"
+  },
   "engines": {
     "node": "6.10.0",
     "npm": "3.10.10"
