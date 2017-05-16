@@ -7,3 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 user1 = User.create(username: "Guest", password: "password", image_url: "http://res.cloudinary.com/dslok1mwv/image/upload/v1494966538/stock_pic_yucizf.png");
+user1 = User.create(username: "robin", password: "password", image_url: "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAgjAAAAJGZiMGM3MWZkLTNjYTMtNDFiYS1hZGExLTA5ZTZiZmNjYWU2MQ.jpg");

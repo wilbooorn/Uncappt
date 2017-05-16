@@ -19,6 +19,12 @@ class NavBar extends React.Component {
   }
 
   render(){
+    let imageUrl;
+    if(this.props.currentUser.image_url) {
+      imageUrl = this.props.currentUser.image_url;
+    } else {
+      imageUrl = "http://res.cloudinary.com/dslok1mwv/image/upload/v1494966538/stock_pic_yucizf.png";
+    }
     return (
       <header className="main-nav">
         <div className="left-side-nav">
@@ -29,7 +35,7 @@ class NavBar extends React.Component {
         <div className="right-side-nav">
           <h3 className="nav-explore">Explore Beers</h3>
           <img onClick={this.handlePicClick} className="nav-profile"
-            src="/assets/stock_pic.png"></img>
+            src={imageUrl}></img>
 
           <ul className="hidden" id="nav-menu">
             <li className="nav-view-profile">View Profile</li>
