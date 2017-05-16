@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class SignUpForm extends React.Component {
   constructor(props){
@@ -63,6 +63,7 @@ class SignUpForm extends React.Component {
       <div className="sign-up-container">
         <h1>Sign Up!</h1>
         <form className="sign-up-form">
+          <h3 className="errors">{this.props.errors}</h3>
           <h3>First Name</h3>
           <input type="text" id="signup-fname"
             value={this.state.fname}
@@ -89,14 +90,14 @@ class SignUpForm extends React.Component {
 
 
           <h3>Tell us about yourself! (Optional)</h3>
-          <input type="password" id="signup-about"
+          <input type="text" id="signup-about"
             value={this.state.about}
             onChange={this.handleAbout}>
           </input>
 
 
           <h3>Where are you drinkin?</h3>
-          <input type="password" id="signup-location"
+          <input type="text" id="signup-location"
             value={this.state.location}
             placeholder="San Francisco, CA"
             onChange={this.handleLocation}>

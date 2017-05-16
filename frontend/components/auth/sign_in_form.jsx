@@ -9,6 +9,7 @@ class SignInForm extends React.Component {
     this.handleUsername = this.handleUsername.bind(this);
     this.handlePassword = this.handlePassword.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleGuest = this.handleGuest.bind(this);
   }
 
   handleUsername(e){
@@ -23,6 +24,11 @@ class SignInForm extends React.Component {
     this.setState({password});
   }
 
+  handleGuest(e){
+    e.preventDefault();
+    this.props.signin({username: "Guest", password: "password"});
+  }
+
   handleSubmit(e){
     e.preventDefault();
     this.props.signin(this.state);
@@ -33,6 +39,9 @@ class SignInForm extends React.Component {
       <div className="sign-in-container">
         <h1>Sign In!</h1>
         <form className="sign-in-form">
+
+          <h3 className="errors">{this.props.errors}</h3>
+
           <h3>Username</h3>
           <input type="text" id="signin-username"
             value={this.state.username}
@@ -45,9 +54,13 @@ class SignInForm extends React.Component {
             onChange={this.handlePassword}>
           </input>
 
-          <button onClick={this.handleSubmit}
-            className="sign-in-button">Sign In</button>
-          
+          <div className="sign-in-buttons">
+            <button onClick={this.handleSubmit}
+              className="sign-in-button">Sign In</button>
+            <button onClick={this.handleGuest}
+              className="demo-button">Continue as a Guest</button>
+          </div>
+
           <p>Not a member?</p>
           <Link to="/signup">Sign Up Here </Link>
 
