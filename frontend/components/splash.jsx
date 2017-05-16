@@ -24,13 +24,13 @@ class Splash extends React.Component{
     return (
       <div className="splash">
         <div className="title">
-          <h1 className="logo">Uncapp't</h1>
+          <h1 className="logo">UNCAPP'T</h1>
         </div>
 
         <div className="buttons">
-          <button className="signin-button"
+          <button className="main-signin-button"
             onClick={this.handleSignIn}>Sign In</button>
-          <button className="signup-button"
+          <button className="main-signup-button"
             onClick={this.handleSignUp}>Sign up</button>
         </div>
 

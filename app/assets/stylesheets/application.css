@@ -16,6 +16,12 @@
  html{
    margin: 0;
    padding: 0;
+   font-family: sans-serif;
+ }
+
+ a {
+   text-decoration: none;
+   color: gold;
  }
 
  button {
@@ -53,25 +59,42 @@
  }
 
 .logo {
-  font-size: 96px;
-  color: white;
+  font-size: 160px;
+  color: gold;
   font-family: sans-serif;
+  font-weight: bold;
 }
+
 .buttons {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
 
-.signin-button, .signup-button{
-  font-size: 20px;
+.main-signin-button, .main-signup-button {
   color: white;
-  cursor: pointer;
-  margin: 20px;
-  height: 40px;
-  width: 100px;
-  background: transparent;
+  font-weight: bold;
+  border: none;
+  font-size: 20px;
+  background-color: transparent;
+  width: 120px;
+  height: 50px;
+  margin-top: 10px;
 }
+
+.main-signup-button {
+  margin: 10px 10px 0 20px;
+  border: 2px solid white;
+  border-radius: 4px;
+}
+
+#signin-username, #signin-password, #signup-username,
+ #signup-password, #signup-location {
+  height: 100px;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
 
 .sign-in-container, .sign-up-container {
   margin: 0;
@@ -85,18 +108,22 @@
   justify-content: center;
 }
 
+
 .sign-in-form, .sign-up-form {
-  border: 2px solid black;
-  padding: 10px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
-  width: 30%;
-  height: auto;
+  width: 20%;
+  height: 40%;
   background-color: white;
-  opacity: 0.9;
 }
 
-#signin-password {
+.sign-up-form {
+  height: 50%;
+}
+
+
+#signin-password, #signup-location {
   margin-bottom: 20px;
 }
 
@@ -104,14 +131,51 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
+  height: 100%;
 }
 
-.sign-in-button {
-  width: 30%;
-  margin-right: 20px;
+.sign-in-button, .demo-button, .signup-button {
+  font-weight: bold;
+  color: white;
+  font-size: 18px;
+  font-family: sans-serif;
+  width: 100%;
+  height: 80px;
+  background-color: gold;
+}
+
+.sign-in-button:hover, .demo-button:hover, .signup-button:hover,
+.main-signup-button:hover, .main-signin-button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: black;
 }
 
 .sign-up-button {
   margin: 0 auto 0 auto;
   width: 40%;
+}
+
+
+.sign-in-title {
+  font-family: sans-serif;
+  font-size: 38px;
+  color: gold;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.or {
+  margin: 5px auto;
+}
+
+.dif-member {
+  margin: 0 10px 0 0;
+}
+
+.member {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-weight: bold;
 }

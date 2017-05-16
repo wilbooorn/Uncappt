@@ -26,7 +26,9 @@ class SignInForm extends React.Component {
 
   handleGuest(e){
     e.preventDefault();
-    this.props.signin({username: "Guest", password: "password"});
+    this.setState({username: "Guest", password: "password"}, () => {
+      this.props.signin(this.state);
+    });
   }
 
   handleSubmit(e){
@@ -37,32 +39,32 @@ class SignInForm extends React.Component {
   render(){
     return (
       <div className="sign-in-container">
-        <h1>Sign In!</h1>
-        <form className="sign-in-form">
-
+          <form className="sign-in-form">
+          <h1 className="sign-in-title">UNCAPP'T</h1>
           <h3 className="errors">{this.props.errors}</h3>
 
-          <h3>Username</h3>
           <input type="text" id="signin-username"
             value={this.state.username}
-            onChange={this.handleUsername}>
+            onChange={this.handleUsername}
+            placeholder="username">
           </input>
 
-          <h3>Password</h3>
           <input type="password" id="signin-password"
             value={this.state.password}
-            onChange={this.handlePassword}>
+            onChange={this.handlePassword}
+            placeholder="password">
           </input>
 
-          <div className="sign-in-buttons">
-            <button onClick={this.handleSubmit}
-              className="sign-in-button">Sign In</button>
-            <button onClick={this.handleGuest}
-              className="demo-button">Continue as a Guest</button>
-          </div>
+          <button onClick={this.handleSubmit}
+            className="sign-in-button">Sign In</button>
+          <p className="or">-- OR --</p>
+          <button onClick={this.handleGuest}
+            className="demo-button">Continue as a Guest</button>
 
-          <p>Not a member?</p>
-          <Link to="/signup">Sign Up Here </Link>
+          <div className="member">
+            <p className="dif-member">Not a member?</p>
+            <Link className="link" to="/signup">Sign Up Here </Link>
+          </div>
 
         </form>
 

@@ -10,9 +10,6 @@ class SignUpForm extends React.Component {
     this.handleUsername = this.handleUsername.bind(this);
     this.handlePassword = this.handlePassword.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleFname = this.handleFname.bind(this);
-    this.handleLname = this.handleLname.bind(this);
-    this.handleAbout = this.handleAbout.bind(this);
     this.handleLocation = this.handleLocation.bind(this);
   }
 
@@ -33,24 +30,6 @@ class SignUpForm extends React.Component {
     this.props.signup(this.state);
   }
 
-  handleFname(e){
-    e.preventDefault();
-    let fname = document.getElementById("signup-fname").value;
-    this.setState({fname});
-  }
-
-  handleLname(e){
-    e.preventDefault();
-    let lname = document.getElementById("signup-lname").value;
-    this.setState({lname});
-  }
-
-  handleAbout(e){
-    e.preventDefault();
-    let about = document.getElementById("signup-about").value;
-    this.setState({about});
-  }
-
   handleLocation(e){
     e.preventDefault();
     let location = document.getElementById("signup-location").value;
@@ -61,40 +40,21 @@ class SignUpForm extends React.Component {
   render(){
     return (
       <div className="sign-up-container">
-        <h1>Sign Up!</h1>
         <form className="sign-up-form">
+          <h1 className="sign-in-title">UNCAPP'T</h1>
           <h3 className="errors">{this.props.errors}</h3>
-          <h3>First Name</h3>
-          <input type="text" id="signup-fname"
-            value={this.state.fname}
-            onChange={this.handleFname}>
-          </input>
 
-          <h3>Last Name</h3>
-          <input type="text" id="signup-lname"
-            value={this.state.lname}
-            onChange={this.handleLname}>
-          </input>
-
-          <h3>Username</h3>
           <input type="text" id="signup-username"
             value={this.state.username}
-            onChange={this.handleUsername}>
+            onChange={this.handleUsername}
+            placeholder="username">
           </input>
 
-          <h3>Password</h3>
           <input type="password" id="signup-password"
             value={this.state.password}
-            onChange={this.handlePassword}>
+            onChange={this.handlePassword}
+            placeholder="password">
           </input>
-
-
-          <h3>Tell us about yourself! (Optional)</h3>
-          <input type="text" id="signup-about"
-            value={this.state.about}
-            onChange={this.handleAbout}>
-          </input>
-
 
           <h3>Where are you drinkin?</h3>
           <input type="text" id="signup-location"
@@ -104,13 +64,13 @@ class SignUpForm extends React.Component {
 
           </input>
 
-
-
           <button onClick={this.handleSubmit}
-            className="sign-up-button">Sign Up</button>
+            className="signup-button">Sign Up</button>
 
-          <p>Have an Account?</p>
-          <Link to="/signin">Sign In Here</Link>
+          <div className="member">
+            <p className="dif-member">Have an Account?</p>
+            <Link to="/signin">Sign In Here</Link>
+          </div>
 
         </form>
 
