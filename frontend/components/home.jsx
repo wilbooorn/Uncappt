@@ -1,5 +1,5 @@
 import React from 'react';
-
+import NavBar from './nav_bar';
 class Home extends React.Component {
   constructor(props){
     super(props);
@@ -7,7 +7,10 @@ class Home extends React.Component {
 
   render(){
     return (
-      <h1>This is the homepage</h1>
+      <div>
+        <NavBar />
+        <h1>This is the homepage</h1>
+      </div>
     );
   }
 }

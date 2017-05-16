@@ -35,9 +35,11 @@ class Splash extends React.Component{
             onClick={this.handleSignUp}>Sign up</button>
         </div>
 
-        <video autoPlay loop id="vid" poster="/assets/beer3.png">
+        <video autoPlay loop id="vid"
+          poster="http://res.cloudinary.com/dslok1mwv/image/upload/v1494966533/beer3_cdlhxc.png">
           <source src="/assets/beer3.mp4" type="video/mp4" />
-          <source src="/assets/beer3.webm" type="video/webm" />
+          <source src="http://res.cloudinary.com/dslok1mwv/video/upload/v1494966540/beer3_snrkmy.webm"
+             type="video/webm" />
         </video>
       </div>
     );

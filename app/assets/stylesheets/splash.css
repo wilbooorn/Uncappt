@@ -1,0 +1,52 @@
+
+.title{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: -1;
+ }
+
+.logo {
+  font-size: 160px;
+  color: gold;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.tagline {
+  color: white;
+  font-size: 30px;
+}
+
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.main-signin-button, .main-signup-button {
+  color: white;
+  font-weight: bold;
+  border: none;
+  font-size: 20px;
+  background-color: transparent;
+  width: 120px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.main-signup-button {
+  margin: 10px 10px 0 20px;
+  border: 2px solid white;
+  border-radius: 4px;
+}
+
+.main-signin-button:hover {
+  border: 2px solid white;
+  border-radius: 4px;
+}

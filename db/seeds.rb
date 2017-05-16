@@ -6,4 +6,4 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user1 = User.create(username: "Guest", password: "password", fname: "Guest", lname: "User");
+user1 = User.create(username: "Guest", password: "password", image_url: "http://res.cloudinary.com/dslok1mwv/image/upload/v1494966538/stock_pic_yucizf.png");
