@@ -27,8 +27,8 @@ class SignInForm extends React.Component {
   handleGuest(e){
     e.preventDefault();
     this.setState({username: "Guest", password: "password"}, () => {
-      this.props.signin(this.state);
-    });
+     setTimeout(() => { this.props.signin(this.state); }, 500);
+   });
   }
 
   handleSubmit(e){

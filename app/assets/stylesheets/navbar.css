@@ -31,6 +31,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  position: relative;
 }
 
 .nav-explore {
@@ -53,4 +54,35 @@
   border-radius: 50%;
   margin: auto 0;
   cursor: pointer;
+}
+
+#nav-menu {
+  position: absolute;
+  width: 100px;
+  color: white;
+  background: #1a1a1a;
+  top: 50px;
+  left: 200px;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 14px;
+  border: 1px solid black;
+}
+
+
+.nav-view-profile {
+  width: 100%;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+
+.nav-signout {
+  cursor: pointer;
+}
+
+
+.hidden {
+  display: none;
 }

@@ -41,6 +41,7 @@ class Splash extends React.Component{
           <source src="http://res.cloudinary.com/dslok1mwv/video/upload/v1494966540/beer3_snrkmy.webm"
              type="video/webm" />
         </video>
+        
       </div>
     );
   }

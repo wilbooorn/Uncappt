@@ -50,9 +50,10 @@
 
  #signin-username, #signin-password, #signup-username,
   #signup-password, #signup-location {
-   height: 100px;
+   height: 80px;
    margin-bottom: 15px;
    font-size: 18px;
+   text-indent: 10px;
  }
 
 
@@ -88,7 +89,7 @@
 }
 
 .sign-up-form {
-  height: 50%;
+  height: 45%;
 }
 
 .sign-in-buttons {
@@ -119,14 +120,20 @@
   color: gold;
   margin: 0 auto;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .or {
-  margin: 5px auto;
+  margin: 8px auto;
 }
 
 .dif-member {
   margin: 0 10px 0 0;
+}
+
+.location {
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
 .member {
