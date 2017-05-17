@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import UploadButton from '../upload_button';
 
 class SignUpForm extends React.Component {
   constructor(props){
@@ -11,6 +12,7 @@ class SignUpForm extends React.Component {
     this.handlePassword = this.handlePassword.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleLocation = this.handleLocation.bind(this);
+    this.postImage = this.postImage.bind(this);
   }
 
   handleUsername(e){
@@ -34,6 +36,18 @@ class SignUpForm extends React.Component {
     e.preventDefault();
     let location = document.getElementById("signup-location").value;
     this.setState({location});
+  }
+
+  postImage(url){
+    let img = {url};
+    $.ajax({
+      method: "POST",
+      url: "/api/images",
+      data: {image: img},
+      success: (image) => {
+        this.setState({ image_url: image.url });
+      }
+    });
   }
 
 
@@ -61,8 +75,11 @@ class SignUpForm extends React.Component {
             value={this.state.location}
             placeholder="San Francisco, CA"
             onChange={this.handleLocation}>
-
           </input>
+
+          <input type="file" className="user-image">
+          </input>
+          <UploadButton postImage={this.postImage}/>
 
           <button onClick={this.handleSubmit}
             className="signup-button">Sign Up</button>

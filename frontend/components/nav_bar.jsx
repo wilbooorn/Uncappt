@@ -8,6 +8,7 @@ class NavBar extends React.Component {
     this.handleSignOut = this.handleSignOut.bind(this);
     this.toggleHidden = this.toggleHidden.bind(this);
     this.handleExplore = this.handleExplore.bind(this);
+    this.handleLogo = this.handleLogo.bind(this);
   }
 
   toggleHidden(){
@@ -27,7 +28,13 @@ class NavBar extends React.Component {
   }
 
   handleExplore(e){
+    e.preventDefault();
     this.props.history.push("/beers");
+  }
+
+  handleLogo(e){
+    e.preventDefault();
+    this.props.history.push('/home');
   }
 
   render(){
@@ -39,7 +46,8 @@ class NavBar extends React.Component {
     }
     return (
       <header className="main-nav">
-        <div className="left-side-nav">
+        <div className="left-side-nav"
+          onClick={this.handleLogo}>
           <h1 className="nav-title">UNCAPP'T</h1>
           <h3 className="nav-tagline">Happy Hour. Every Hour.</h3>
         </div>
