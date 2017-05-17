@@ -50,7 +50,7 @@
 
  #signin-username, #signin-password, #signup-username,
   #signup-password, #signup-location {
-   height: 80px;
+   height: 60px;
    margin-bottom: 15px;
    font-size: 18px;
    text-indent: 10px;
@@ -89,7 +89,8 @@
 }
 
 .sign-up-form {
-  height: 45%;
+  height: 60%;
+  width: 25%;
 }
 
 .sign-in-buttons {
@@ -105,12 +106,12 @@
   font-size: 18px;
   font-family: sans-serif;
   width: 100%;
-  height: 80px;
+  height: 60px;
   background-color: gold;
 }
 
 .sign-up-button {
-  margin: 0 auto 0 auto;
+  margin: 10px auto 0 auto;
   width: 40%;
 }
 
@@ -142,4 +143,28 @@
   flex-direction: row;
   justify-content: center;
   font-weight: bold;
+}
+
+.signup-image-container {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.signup-image {
+  width: 80px;
+  height: auto;
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.upload-button {
+  width: 90%;
+  background-color: gold;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 20px;
+  height: 30px;
+  margin-right: 20px;
 }

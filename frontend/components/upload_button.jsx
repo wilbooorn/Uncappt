@@ -20,7 +20,8 @@ class UploadButton extends React.Component{
   render() {
     return (
       <div className="upload-form">
-        <button onClick={this.upload}>Upload new image!</button>
+        <button onClick={this.upload}
+          className="upload-button">Upload new image!</button>
       </div>
     );
   }

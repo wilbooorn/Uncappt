@@ -52,6 +52,10 @@ class SignUpForm extends React.Component {
 
 
   render(){
+    let image = <div></div>;
+    if (this.state.image_url !== ""){
+      image = <img className="signup-image" src={this.state.image_url} />;
+    }
     return (
       <div className="sign-up-container">
         <form className="sign-up-form">
@@ -77,9 +81,10 @@ class SignUpForm extends React.Component {
             onChange={this.handleLocation}>
           </input>
 
-          <input type="file" className="user-image">
-          </input>
-          <UploadButton postImage={this.postImage}/>
+          <div className="signup-image-container">
+            <UploadButton postImage={this.postImage}/>
+            {image}
+          </div>
 
           <button onClick={this.handleSubmit}
             className="signup-button">Sign Up</button>
