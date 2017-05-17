@@ -10,12 +10,21 @@ class BeerIndexItem extends React.Component {
       <li className="beer-show">
         <div className="main-beer-show">
           <div className="top-beer-show">
-            <img className="beer-image"
-              src={this.props.beer.image_url} />
+            <div className="beer-image-container">
+              <img className="beer-image"
+                src={this.props.beer.image_url} />
+            </div>
 
             <div className="beer-info">
-              <p className="beer-title">{this.props.beer.name}</p>
-              <p className="beer-brewery">{this.props.beer.brewery}</p>
+              <div className="title-and-add">
+                <div className="top-left-beer">
+                  <p className="beer-title">{this.props.beer.name}</p>
+                  <p className="beer-brewery">{this.props.beer.brewery}</p>
+                </div>
+                <div className="beer-plus">
+                  <p className="beer-plus-img">+</p>
+                </div>
+              </div>
               <p className="beer-style">{this.props.beer.style}</p>
               <p className="beer-description">{this.props.beer.description}</p>
             </div>

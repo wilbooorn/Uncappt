@@ -1,6 +1,6 @@
 .all-beers {
   width: 60%;
-  display: flex;
+
   justify-content: center;
   margin: 30px auto;
 }
@@ -21,7 +21,13 @@
   font-size: 32px;
   font-weight: bold;
   color: gold;
+  cursor: pointer;
 }
+
+.beer-title:hover {
+  color: black;
+}
+
 
 .beer-brewery {
   margin-bottom: 20px;
@@ -29,6 +35,11 @@
 
 .beer-style {
   margin-bottom: 20px;
+}
+
+.title-and-add {
+  display: flex;
+  justify-content: space-between;
 }
 
 .beer-show{
@@ -44,7 +55,7 @@
 
 .bottom-beer-show{
   display: flex;
-  margin: 0 0 30px 150px;
+  margin: 0 0 30px 140px;
 }
 
 .beer-abv {
@@ -52,7 +63,24 @@
 }
 
 .beer-image {
-  width: 90px;
+  margin-left: 30px;
+  width: auto;
   height: 200px;
   margin: 15px;
+}
+
+.beer-image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.beer-plus-img {
+  font-size: 56px;
+  background: transparent;
+  cursor: pointer;
+  color: gold;
+}
+
+.beer-plus-img:hover {
+  color: black;
 }
