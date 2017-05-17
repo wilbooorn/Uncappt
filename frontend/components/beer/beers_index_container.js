@@ -1,7 +1,7 @@
 import BeersIndex from './beers_index';
 import { connect } from 'react-redux';
-import selectAllBeers from '../../reducers/selectors';
-import requestAllBeer from '../../actions/beer_actions';
+import {selectAllBeers} from '../../reducers/selectors';
+import {requestAllBeer} from '../../actions/beer_actions';
 
 const mapStateToProps = state => ({
   beers: selectAllBeers(state)

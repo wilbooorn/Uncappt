@@ -8,7 +8,7 @@ class Home extends React.Component {
   render(){
     return (
       <div>
-        <NavBarContainer />
+        <NavBarContainer history={this.props.history}/>
         <h1>This is the homepage</h1>
       </div>
     );
