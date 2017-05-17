@@ -12,7 +12,8 @@ class BeerIndexItem extends React.Component {
           <div className="top-beer-show">
             <div className="beer-image-container">
               <img className="beer-image"
-                src={this.props.beer.image_url} />
+                src={this.props.beer.image_url}>
+              </img>
             </div>
 
             <div className="beer-info">
