@@ -22,7 +22,9 @@ class BeersIndex extends React.Component {
         <div>
           <NavBarContainer history={this.props.history}/>
           <ul className="all-beers">
-            <h1 className="all-the-beers">All Beers</h1>
+            <div className="all-the-beers">
+              <h1>All Beers</h1>
+            </div>
             {beers}
             <div className="add-beer-show">
               <p className="dif-member">Can't find what you're looking for?</p>
