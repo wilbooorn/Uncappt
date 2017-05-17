@@ -88,3 +88,22 @@
 .beer-plus-img:hover {
   color: black;
 }
+
+.error {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 60px;
+  font-weight: bold;
+  color: #FAC937;
+}
+
+.add-beer-show {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+}

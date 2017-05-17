@@ -20,5 +20,6 @@ export const requestAllBeer = () => dispatch => {
 
 export const requestOneBeer = (beerId) => dispatch => {
   return APIUtil.fetchOneBeer(beerId)
-    .then(beer => dispatch(receiveOneBeer(beer)));
+    .then(beer => dispatch(receiveOneBeer(beer)),
+    error => dispatch(receiveOneBeer({})));
 };

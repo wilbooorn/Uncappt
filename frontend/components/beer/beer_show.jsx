@@ -19,12 +19,24 @@ class BeerShow extends React.Component {
 
   render(){
     console.log(this.props);
-    return (
-      <div>
-        <NavBarContainer history={this.props.history}/>
-        <BeerIndexItem beer={this.props.beer} />
-      </div>
-    );
+    if(this.props.beer.name){
+      return (
+        <div>
+          <NavBarContainer history={this.props.history}/>
+          <BeerIndexItem beer={this.props.beer} />
+        </div>
+      );
+    }
+    else{
+      return (
+        <div>
+          <NavBarContainer history={this.props.history}/>
+          <div className="error">
+            <h1>BEER NOT FOUND :(</h1>
+          </div>
+        </div>
+      );
+    }
   }
 }
 

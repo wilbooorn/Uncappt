@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBarContainer from '../nav_bar_container';
 import BeerIndexItem from './beer_index_item';
+import {Link} from 'react-router-dom';
 
 class BeersIndex extends React.Component {
   constructor(props){
@@ -23,6 +24,10 @@ class BeersIndex extends React.Component {
           <ul className="all-beers">
             <h1 className="all-the-beers">All Beers</h1>
             {beers}
+            <div className="add-beer-show">
+              <p className="dif-member">Can't find what you're looking for?</p>
+              <Link className="link" to="/beers/new">Add You Favorite Beer</Link>
+            </div>
           </ul>
         </div>
       );

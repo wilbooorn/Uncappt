@@ -5,6 +5,7 @@ class BeerIndexItem extends React.Component {
     super(props);
 
     this.handleTitleClick = this.handleTitleClick.bind(this);
+    this.handlePlus = this.handlePlus.bind(this);
   }
 
   handleTitleClick(e){
@@ -13,8 +14,12 @@ class BeerIndexItem extends React.Component {
     this.props.history.push(url);
   }
 
+  handlePlus(e){
+    e.preventDefault();
+    alert("Check-Ins not implemented yet!");
+  }
+
   render(){
-    console.log(this.props);
     return (
       <li className="beer-show">
         <div className="main-beer-show">
@@ -32,7 +37,7 @@ class BeerIndexItem extends React.Component {
                   <p className="beer-brewery">{this.props.beer.brewery}</p>
                 </div>
                 <div className="beer-plus">
-                  <p className="beer-plus-img">+</p>
+                  <p onClick={this.handlePlus} className="beer-plus-img">+</p>
                 </div>
               </div>
               <p className="beer-style">{this.props.beer.style}</p>
