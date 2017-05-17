@@ -15,6 +15,10 @@ class SignUpForm extends React.Component {
     this.postImage = this.postImage.bind(this);
   }
 
+  componentWillMount(){
+    this.props.clearErrors();
+  }
+
   handleUsername(e){
     e.preventDefault();
     let username = document.getElementById("signup-username").value;

@@ -12,6 +12,10 @@ class SignInForm extends React.Component {
     this.handleGuest = this.handleGuest.bind(this);
   }
 
+  componentWillMount(){
+    this.props.clearErrors();
+  }
+
   handleUsername(e){
     e.preventDefault();
     let username = document.getElementById("signin-username").value;
