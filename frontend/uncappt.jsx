@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import Root from './root';
 import configureStore from './store/store';
 import {signout} from './actions/session_actions';
+import {requestAllBeer } from './actions/beer_actions';
 
-window.signout = signout;
+window.requestAllBeer = requestAllBeer;
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;

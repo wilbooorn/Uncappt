@@ -6,16 +6,28 @@ class NavBar extends React.Component {
 
     this.handlePicClick = this.handlePicClick.bind(this);
     this.handleSignOut = this.handleSignOut.bind(this);
+    this.toggleHidden = this.toggleHidden.bind(this);
+    this.handleExplore = this.handleExplore.bind(this);
+  }
+
+  toggleHidden(){
+    document.getElementById("nav-menu").classList.toggle("hidden");
+    document.removeEventListener("click", this.toggleHidden);
   }
 
   handlePicClick(e){
     e.preventDefault();
-    document.getElementById("nav-menu").classList.toggle("hidden");
+    this.toggleHidden();
+    document.addEventListener("click", this.toggleHidden);
   }
 
   handleSignOut(e){
     e.preventDefault();
     this.props.signout();
+  }
+
+  handleExplore(e){
+    this.props.history.push("/beers");
   }
 
   render(){
@@ -33,7 +45,9 @@ class NavBar extends React.Component {
         </div>
 
         <div className="right-side-nav">
-          <h3 className="nav-explore">Explore Beers</h3>
+          <h3 className="nav-explore"
+            onClick={this.handleExplore}>Explore Beers
+          </h3>
           <img onClick={this.handlePicClick} className="nav-profile"
             src={imageUrl}></img>
 
