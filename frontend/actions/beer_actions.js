@@ -8,7 +8,17 @@ export const receiveAllBeer = (beers) => {
   beers
 };};
 
+export const receiveOneBeer = (beer) => ({
+  type: RECEIVE_ONE_BEER,
+  beer
+});
+
 export const requestAllBeer = () => dispatch => {
   return APIUtil.fetchAllBeers()
     .then(beer => dispatch(receiveAllBeer(beer)));
+};
+
+export const requestOneBeer = (beerId) => dispatch => {
+  return APIUtil.fetchOneBeer(beerId)
+    .then(beer => dispatch(receiveOneBeer(beer)));
 };

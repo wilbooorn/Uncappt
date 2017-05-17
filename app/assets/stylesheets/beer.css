@@ -1,8 +1,12 @@
 .all-beers {
-  width: 60%;
-
+  width: 50%;
   justify-content: center;
   margin: 30px auto;
+}
+
+.all-the-beers {
+  font-size: 38px;
+  font-weight: bold;
 }
 
 .main-beer-show {
@@ -20,7 +24,7 @@
 .beer-title {
   font-size: 32px;
   font-weight: bold;
-  color: gold;
+  color: #FAC937;
   cursor: pointer;
 }
 
@@ -78,7 +82,7 @@
   font-size: 56px;
   background: transparent;
   cursor: pointer;
-  color: gold;
+  color: #FAC937;
 }
 
 .beer-plus-img:hover {

@@ -78,7 +78,7 @@ class SignUpForm extends React.Component {
             placeholder="password">
           </input>
 
-          <h3 className="location">Where are you drinkin?</h3>
+          <h3 className="location">Where are you drinking?</h3>
           <input type="text" id="signup-location"
             value={this.state.location}
             placeholder="San Francisco, CA"
@@ -86,7 +86,7 @@ class SignUpForm extends React.Component {
           </input>
 
           <div className="signup-image-container">
-            <UploadButton postImage={this.postImage}/>
+            <UploadButton postImage={this.postImage} text="Upload Profile Picture"/>
             {image}
           </div>
 

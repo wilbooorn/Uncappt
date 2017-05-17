@@ -4,3 +4,10 @@ export const fetchAllBeers = () => (
     url: "api/beers"
   })
 );
+
+export const fetchOneBeer = (beerId) => (
+  $.ajax({
+    method: "GET",
+    url: `/api/beers/${beerId}`
+  })
+);

@@ -3,9 +3,18 @@ import React from 'react';
 class BeerIndexItem extends React.Component {
   constructor(props){
     super(props);
+
+    this.handleTitleClick = this.handleTitleClick.bind(this);
+  }
+
+  handleTitleClick(e){
+    e.preventDefault();
+    let url = "/beers/" + this.props.beer.id;
+    this.props.history.push(url);
   }
 
   render(){
+    console.log(this.props);
     return (
       <li className="beer-show">
         <div className="main-beer-show">
@@ -18,7 +27,8 @@ class BeerIndexItem extends React.Component {
             <div className="beer-info">
               <div className="title-and-add">
                 <div className="top-left-beer">
-                  <p className="beer-title">{this.props.beer.name}</p>
+                  <p className="beer-title"
+                    onClick={this.handleTitleClick}>{this.props.beer.name}</p>
                   <p className="beer-brewery">{this.props.beer.brewery}</p>
                 </div>
                 <div className="beer-plus">

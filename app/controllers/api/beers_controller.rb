@@ -4,6 +4,10 @@ class Api::BeersController < ApplicationController
     @beer = Beer.new
   end
 
+  def show
+    @beer = Beer.find_by(id: params[:id])
+  end
+
   def create
     @beer = Beer.new(beer_params)
     if @beer.save
