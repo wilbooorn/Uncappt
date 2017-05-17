@@ -4,6 +4,7 @@ import { AuthRoute, ProtectedRoute } from './util/route_util';
 import Splash from './components/splash';
 import SignInFormContainer from './components/auth/sign_in_form_container';
 import SignUpFormContainer from './components/auth/sign_up_form_container';
+import BeersIndexContainer from './components/beer/beers_index_container';
 import Home from './components/home';
 
 const App = () => (
@@ -12,6 +13,7 @@ const App = () => (
       <AuthRoute exact path ="/signin" component={SignInFormContainer} />
       <AuthRoute exact path ="/signup" component={SignUpFormContainer} />
       <ProtectedRoute exact path="/home" component={Home} />
+      <ProtectedRoute exact path="/beers" component={BeersIndexContainer} />
       <AuthRoute exact path="/" component={Splash}/>
     </Switch>
   </div>
