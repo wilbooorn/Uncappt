@@ -35,9 +35,9 @@ class BeerShow extends React.Component {
           <NavBarContainer history={this.props.history}/>
           <div className="error">
             <h1>BEER NOT FOUND :(</h1>
-            
+
             <div className="back-to-beers">
-              <Link to="/beers/">Back to All Beers</Link>
+              <Link className='back-to-beers-link' to="/beers/">Back to All Beers</Link>
             </div>
 
           </div>
