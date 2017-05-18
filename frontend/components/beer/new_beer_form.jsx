@@ -5,10 +5,68 @@ import UploadButton from '../upload_button';
 class NewBeerForm extends React.Component {
   constructor(props){
     super(props);
-    this.state={name: "", description:"", brewery:"", abv:null, ibu:null,
+    this.state={name: "", description:"", brewery:"", abv:"", ibu:"",
                 style:"", image_url:""};
 
     this.postImage = this.postImage.bind(this);
+    this.handleName = this.handleName.bind(this);
+    this.handleBrewery = this.handleBrewery.bind(this);
+    this.handleDescription = this.handleDescription.bind(this);
+    this.handleStyle = this.handleStyle.bind(this);
+    this.handleIBU = this.handleIBU.bind(this);
+    this.handleABV = this.handleABV.bind(this);
+    this.handleCancel = this.handleCancel.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleCancel(e){
+    e.preventDefault();
+    this.props.history.push("/beers");
+  }
+
+  handleSubmit(e){
+    e.preventDefault();
+    if(this.state.image_url === ""){
+      this.setState({image_url: "http://res.cloudinary.com/dslok1mwv/image/upload/v1495061245/bkwvbdxkybjgwtw0zplp.png"}, ()=> {
+        this.props.createNewBeer(this.state);
+      });
+    }
+  }
+
+  handleName(e){
+    e.preventDefault();
+    let name = document.getElementById("new-beer-name").value;
+    this.setState({name});
+  }
+
+  handleBrewery(e){
+    e.preventDefault();
+    let brewery = document.getElementById("new-beer-brewery").value;
+    this.setState({brewery});
+  }
+
+  handleDescription(e){
+    e.preventDefault();
+    let description = document.getElementById("new-beer-description").value;
+    this.setState({description});
+  }
+
+  handleStyle(e){
+    e.preventDefault();
+    let style = document.getElementById("new-beer-style").value;
+    this.setState({style});
+  }
+
+  handleIBU(e){
+    e.preventDefault();
+    let ibu = document.getElementById("new-beer-ibu").value;
+    this.setState({ibu});
+  }
+
+  handleABV(e){
+    e.preventDefault();
+    let abv = document.getElementById("new-beer-abv").value;
+    this.setState({abv});
   }
 
   postImage(url){

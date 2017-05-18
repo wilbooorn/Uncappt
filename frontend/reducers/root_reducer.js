@@ -4,7 +4,7 @@ import BeersReducer from './beers_reducer';
 
 const rootReducer = combineReducers({
   session: SessionsReducer,
-  beers: BeersReducer
+  beerInfo: BeersReducer
 });
 
 export default rootReducer;

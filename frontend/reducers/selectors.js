@@ -1,3 +1,4 @@
 export const selectAllBeers = state => {
-  return Object.keys(state.beers).map(beerId => state.beers[beerId]);
+  console.log(state);
+  return Object.keys(state.beerInfo.beers).map(beerId => state.beerInfo.beers[beerId]);
 };

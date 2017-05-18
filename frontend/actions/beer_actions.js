@@ -39,5 +39,5 @@ export const requestOneBeer = (beerId) => dispatch => {
 export const createNewBeer = beer => dispatch => {
   return APIUtil.sendOneBeer(beer)
   .then(newBeer => dispatch(createOneBeer(newBeer)),
-  errors => dispatch(receiveErrors(errors.parseJSON)));
+  error => dispatch(receiveErrors(error.responseJSON)));
 };
