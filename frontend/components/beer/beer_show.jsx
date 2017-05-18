@@ -19,7 +19,6 @@ class BeerShow extends React.Component {
   }
 
   render(){
-    console.log(this.props);
     if(this.props.beer.name){
       return (
         <div>

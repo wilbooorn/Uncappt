@@ -76,7 +76,6 @@ class NewBeerForm extends React.Component {
       url: "/api/images",
       data: {image: img},
       success: (image) => {
-        console.log("success");
         this.setState({ image_url: image.url });
       }
     });

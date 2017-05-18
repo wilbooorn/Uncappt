@@ -13,7 +13,6 @@ const BeersReducer = (state = defaultState, action) => {
   switch(action.type){
 
     case RECEIVE_ALL_BEER:
-      console.log(action);
       newState = merge({}, state);
       newState.beers = action.beers;
       return newState;
@@ -30,7 +29,6 @@ const BeersReducer = (state = defaultState, action) => {
       return newState;
 
     case RECEIVE_ERRORS:
-      console.log(state);
       newState = merge({}, state);
       newState.errors = action.errors;
       console.log(action.errors);
