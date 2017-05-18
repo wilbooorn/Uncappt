@@ -23,9 +23,13 @@ class NewBeerForm extends React.Component {
     if(this.props.match.params.beerId){
       this.props.requestOneBeer(this.props.match.params.beerId);
       this.text = "Update Beer";
+      this.imageText = "Update photo";
+      this.titleText = "Edit Beer!";
     }
     else{
       this.text = "Create Beer";
+      this.imageText = "Add Photo of Beer";
+      this.titleText = "Add a New Beer!";
     }
   }
 
@@ -128,7 +132,7 @@ class NewBeerForm extends React.Component {
         <div className="new-beer-form-container">
           <form className="new-beer-form">
             <h1 className="new-beer-title">UNCAPP'T</h1>
-            <h1 className="new-beer-message">Add a New Beer!</h1>
+            <h1 className="new-beer-message">{this.titleText}</h1>
             <h3 className="errors">{this.props.errors.join(", ")}</h3>
 
             <div className="new-beer-name-brewery">
@@ -171,7 +175,7 @@ class NewBeerForm extends React.Component {
             </div>
 
             <div className="new-beer-image-container">
-              <UploadButton postImage={this.postImage} text={"Add Photo of Beer"}/>
+              <UploadButton postImage={this.postImage} text={this.imageText}/>
               {image}
             </div>
 
