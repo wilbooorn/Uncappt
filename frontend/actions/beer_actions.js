@@ -1,7 +1,7 @@
 export const RECEIVE_ALL_BEER = "RECEIVE_ALL_BEER";
 export const RECEIVE_ONE_BEER = "RECEIVE_ONE_BEER";
 export const CREATE_NEW_BEER = "CREATE_NEW_BEER";
-export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
+export const RECEIVE_BEER_ERRORS = "RECEIVE_BEER_ERRORS";
 import * as APIUtil from '../util/beer_util';
 
 export const receiveAllBeer = (beers) => {
@@ -20,8 +20,8 @@ export const createOneBeer = beer => ({
   beer
 });
 
-export const receiveErrors = errors => ({
-  type: RECEIVE_ERRORS,
+export const receiveBeerErrors = errors => ({
+  type: RECEIVE_BEER_ERRORS,
   errors
 });
 
@@ -38,6 +38,6 @@ export const requestOneBeer = (beerId) => dispatch => {
 
 export const createNewBeer = beer => dispatch => {
   return APIUtil.sendOneBeer(beer)
-  .then(newBeer => dispatch(createOneBeer(newBeer)),
-  error => dispatch(receiveErrors(error.responseJSON)));
+    .then(newBeer => dispatch(createOneBeer(newBeer)),
+    error => dispatch(receiveBeerErrors(error.responseJSON)));
 };

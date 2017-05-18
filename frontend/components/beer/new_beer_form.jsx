@@ -93,7 +93,7 @@ class NewBeerForm extends React.Component {
           <form className="new-beer-form">
             <h1 className="new-beer-title">UNCAPP'T</h1>
             <h1 className="new-beer-message">Add a New Beer!</h1>
-            <h3 className="errors">{this.props.errors}</h3>
+            <h3 className="errors">{this.props.errors.join(", ")}</h3>
 
             <div className="new-beer-name-brewery">
               <input type="text" id="new-beer-name"
@@ -139,7 +139,7 @@ class NewBeerForm extends React.Component {
               {image}
             </div>
 
-              <div className = "new-beer-buttons">
+            <div className = "new-beer-buttons">
               <button onClick={this.handleSubmit}
                 className="new-beer-button">Create Beer</button>
 

@@ -1,5 +1,5 @@
 import { RECEIVE_ALL_BEER, RECEIVE_ONE_BEER,
-CREATE_NEW_BEER, RECEIVE_ERRORS } from '../actions/beer_actions';
+CREATE_NEW_BEER, RECEIVE_BEER_ERRORS } from '../actions/beer_actions';
 import merge from 'lodash/merge';
 
 const defaultState = {
@@ -28,7 +28,7 @@ const BeersReducer = (state = defaultState, action) => {
       newState.errors = [];
       return newState;
 
-    case RECEIVE_ERRORS:
+    case RECEIVE_BEER_ERRORS:
       newState = merge({}, state);
       newState.errors = action.errors;
       console.log(action.errors);
