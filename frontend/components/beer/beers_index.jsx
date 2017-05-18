@@ -2,6 +2,7 @@ import React from 'react';
 import NavBarContainer from '../nav_bar_container';
 import BeerIndexItem from './beer_index_item';
 import {Link} from 'react-router-dom';
+import Footer from '../footer';
 
 class BeersIndex extends React.Component {
   constructor(props){
@@ -31,6 +32,7 @@ class BeersIndex extends React.Component {
               <Link className="link" to="/beers/new">Add You Favorite Beer</Link>
             </div>
           </ul>
+          <Footer />
         </div>
       );
     }

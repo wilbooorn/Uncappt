@@ -1,0 +1,24 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  align-content: center;
+  align-items: center;
+  background: #FAC937;
+}
+
+.footer > a {
+  margin: 20px 40px;
+  font-weight: bold;
+  color: white;
+}
+
+.footer > a:hover {
+  text-shadow: 2px 2px black;
+}
+
+.footer > p{
+  margin: 20px 40px;
+}

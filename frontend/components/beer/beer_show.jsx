@@ -2,6 +2,7 @@ import React from 'react';
 import NavBarContainer from '../nav_bar_container';
 import BeerIndexItem from './beer_index_item';
 import {Link} from 'react-router-dom';
+import Footer from '../footer';
 
 class BeerShow extends React.Component {
   constructor(props){
@@ -29,6 +30,7 @@ class BeerShow extends React.Component {
           <NavBarContainer history={this.props.history}/>
           <BeerIndexItem page="show" deleteBeer={this.props.deleteBeer} beer={this.props.beer} history={this.props.history} />
           <Link className="back-to-beers" to="/beers">Back to All Beers</Link>
+          <Footer />
         </div>
       );
     }
@@ -42,7 +44,7 @@ class BeerShow extends React.Component {
             <div className="back-to-beers">
               <Link className='back-to-beers-link' to="/beers/">Back to All Beers</Link>
             </div>
-
+            <Footer />
           </div>
         </div>
       );
