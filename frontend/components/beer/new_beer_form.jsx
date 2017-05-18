@@ -19,6 +19,32 @@ class NewBeerForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount(){
+    if(this.props.match.params.beerId){
+      this.props.requestOneBeer(this.props.match.params.beerId);
+      this.text = "Update Beer";
+    }
+    else{
+      this.text = "Create Beer";
+    }
+  }
+
+  componentWillReceiveProps(nextProps){
+    console.log(nextProps);
+    if(nextProps.beer.name){
+      this.setState({
+        name:nextProps.beer.name,
+        brewery:nextProps.beer.brewery,
+        description:nextProps.beer.description,
+        style:nextProps.beer.style,
+        abv:nextProps.beer.abv,
+        ibu:nextProps.beer.ibu,
+        image_url:nextProps.beer.image_url,
+
+      });
+    }
+  }
+
   handleCancel(e){
     e.preventDefault();
     this.props.history.push("/beers");
@@ -26,13 +52,18 @@ class NewBeerForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    if(this.state.image_url === ""){
-      this.setState({image_url: "http://res.cloudinary.com/dslok1mwv/image/upload/v1495061245/bkwvbdxkybjgwtw0zplp.png"}, ()=> {
-        this.props.createNewBeer(this.state);
-        this.props.history.push("/beers");
+    if(this.props.match.params.beerId){
+      this.setState({id: this.props.match.params.beerId}, ()=>{
+        this.props.updateBeer(this.state);
+        this.props.history.push(`/beers/${this.props.match.params.beerId}`);
       });
     }
-    else{
+    else if(this.state.image_url === ""){
+        this.setState({image_url: "http://res.cloudinary.com/dslok1mwv/image/upload/v1495061245/bkwvbdxkybjgwtw0zplp.png"}, ()=> {
+          this.props.createNewBeer(this.state);
+          this.props.history.push("/beers");
+        });
+    }else{
       this.props.createNewBeer(this.state);
       this.props.history.push("/beers");
     }
@@ -140,13 +171,13 @@ class NewBeerForm extends React.Component {
             </div>
 
             <div className="new-beer-image-container">
-              <UploadButton postImage={this.postImage} text="Add Photo of Beer"/>
+              <UploadButton postImage={this.postImage} text={"Add Photo of Beer"}/>
               {image}
             </div>
 
             <div className = "new-beer-buttons">
               <button onClick={this.handleSubmit}
-                className="new-beer-button">Create Beer</button>
+                className="new-beer-button">{this.text}</button>
 
               <button onClick={this.handleCancel}
                 className="cancel-beer-button">Cancel</button>

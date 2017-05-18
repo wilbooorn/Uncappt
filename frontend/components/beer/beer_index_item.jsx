@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 class BeerIndexItem extends React.Component {
   constructor(props){
@@ -6,6 +7,13 @@ class BeerIndexItem extends React.Component {
 
     this.handleTitleClick = this.handleTitleClick.bind(this);
     this.handlePlus = this.handlePlus.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
+  }
+
+  handleDelete(e){
+    e.preventDefault();
+    this.props.deleteBeer(this.props.beer.id);
+    this.props.history.push("/beers");
   }
 
   handleTitleClick(e){
@@ -20,6 +28,14 @@ class BeerIndexItem extends React.Component {
   }
 
   render(){
+    let editUrl = "/beers/" + this.props.beer.id + "/edit";
+    let editInfo= <div></div>;
+    if (this.props.page){
+      editInfo = <div className="edit-delete">
+        <Link className="edit-beer-link"to={editUrl}>Edit Beer</Link>
+        <h4 onClick={this.handleDelete} className="delete">Delete Beer</h4>
+      </div>;
+    }
     return (
       <li className="beer-show">
         <div className="main-beer-show">
@@ -46,8 +62,11 @@ class BeerIndexItem extends React.Component {
           </div>
 
           <div className="bottom-beer-show">
-            <p className='beer-abv'> ABV: {this.props.beer.abv}</p>
-            <p className='beer-ibu'> IBU: {this.props.beer.ibu}</p>
+            <div className="beer-abv-ibu">
+              <p className='beer-abv'> ABV: {this.props.beer.abv}</p>
+              <p className='beer-ibu'> IBU: {this.props.beer.ibu}</p>
+            </div>
+            {editInfo}
           </div>
         </div>
       </li>

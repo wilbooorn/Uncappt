@@ -70,6 +70,7 @@
 .bottom-beer-show{
   display: flex;
   margin: 0 0 30px 140px;
+  justify-content: space-between;
 }
 
 .beer-abv {
@@ -134,4 +135,34 @@
 .link {
   font-weight: bolder;
   padding-bottom: 20px;
+}
+
+.delete {
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.delete:hover {
+  color: #FAC937;
+}
+
+.edit-beer-link {
+  font-weight: bold;
+}
+
+.edit-beer-link:hover {
+  color: black;
+}
+
+.beer-abv-ibu{
+  display: flex;
+  align-content: center;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.edit-delete{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

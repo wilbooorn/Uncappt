@@ -37,7 +37,7 @@ class Api::BeersController < ApplicationController
   def destroy
     @beer = Beer.find_by(id: params[:id])
     @beer.destroy
-    render :index
+    render :show
   end
 
   private

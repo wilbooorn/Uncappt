@@ -19,3 +19,18 @@ export const sendOneBeer = (beer) => (
     data: {beer}
   })
 );
+
+export const deleteBeer = (beerId) => (
+  $.ajax({
+    method: "DELETE",
+    url: `/api/beers/${beerId}`
+  })
+);
+
+export const updateBeer = beer => (
+  $.ajax({
+    method: "PATCH",
+    url: `/api/beers/${beer.id}`,
+    data: {beer}
+  })
+);

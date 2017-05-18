@@ -23,7 +23,7 @@ class BeerShow extends React.Component {
       return (
         <div>
           <NavBarContainer history={this.props.history}/>
-          <BeerIndexItem beer={this.props.beer} />
+          <BeerIndexItem page="show" deleteBeer={this.props.deleteBeer} beer={this.props.beer} history={this.props.history} />
           <Link className="back-to-beers" to="/beers">Back to All Beers</Link>
         </div>
       );

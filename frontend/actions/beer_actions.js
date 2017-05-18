@@ -2,6 +2,9 @@ export const RECEIVE_ALL_BEER = "RECEIVE_ALL_BEER";
 export const RECEIVE_ONE_BEER = "RECEIVE_ONE_BEER";
 export const CREATE_NEW_BEER = "CREATE_NEW_BEER";
 export const RECEIVE_BEER_ERRORS = "RECEIVE_BEER_ERRORS";
+export const REMOVE_BEER = "REMOVE_BEER";
+export const UPDATE_BEER = "UPDATE_BEER";
+
 import * as APIUtil from '../util/beer_util';
 
 export const receiveAllBeer = (beers) => {
@@ -20,9 +23,19 @@ export const createOneBeer = beer => ({
   beer
 });
 
+export const removeOneBeer = beer => ({
+  type: REMOVE_BEER,
+  beer
+});
+
 export const receiveBeerErrors = errors => ({
   type: RECEIVE_BEER_ERRORS,
   errors
+});
+
+export const updateOneBeer = beer => ({
+  type: UPDATE_BEER,
+  beer
 });
 
 export const requestAllBeer = () => dispatch => {
@@ -39,5 +52,17 @@ export const requestOneBeer = (beerId) => dispatch => {
 export const createNewBeer = beer => dispatch => {
   return APIUtil.sendOneBeer(beer)
     .then(newBeer => dispatch(createOneBeer(newBeer)),
+    error => dispatch(receiveBeerErrors(error.responseJSON)));
+};
+
+export const deleteBeer = beerId => dispatch => {
+  return APIUtil.deleteBeer(beerId)
+    .then(beer => dispatch(removeOneBeer(beer)),
+    error =>  dispatch(receiveBeerErrors(error.responseJSON)));
+};
+
+export const updateBeer = beer => dispatch => {
+  return APIUtil.updateBeer(beer)
+    .then(newBeer => dispatch(updateOneBeer(newBeer)),
     error => dispatch(receiveBeerErrors(error.responseJSON)));
 };
