@@ -34,7 +34,6 @@ class NewBeerForm extends React.Component {
   }
 
   componentWillReceiveProps(nextProps){
-    console.log(nextProps);
     if(nextProps.beer.name){
       this.setState({
         name:nextProps.beer.name,
@@ -58,8 +57,9 @@ class NewBeerForm extends React.Component {
     e.preventDefault();
     if(this.props.match.params.beerId){
       this.setState({id: this.props.match.params.beerId}, ()=>{
-        this.props.updateBeer(this.state);
-        this.props.history.push(`/beers/${this.props.match.params.beerId}`);
+        this.props.updateBeer(this.state).then( () => {
+          this.props.history.push(`/beers/${this.props.match.params.beerId}`);
+        });
       });
     }
     else if(this.state.image_url === ""){

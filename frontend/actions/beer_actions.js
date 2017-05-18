@@ -61,10 +61,9 @@ export const deleteBeer = beerId => dispatch => {
     error =>  dispatch(receiveBeerErrors(error.responseJSON)));
 };
 
-export const updateBeer = (beer, router) => dispatch => {
+export const updateBeer = (beer) => dispatch => {
   return APIUtil.updateBeer(beer)
     .then(newBeer => {
-      console.log(newBeer);
       return dispatch(updateOneBeer(newBeer));
     },
     error => dispatch(receiveBeerErrors(error.responseJSON)));

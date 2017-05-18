@@ -8,8 +8,11 @@ class BeerShow extends React.Component {
     super(props);
   }
 
-  componentDidMount(){
+  componentWillMount(){
     console.log(this.props);
+  }
+
+  componentDidMount(){
     this.props.requestOneBeer(this.props.match.params.beerId);
   }
 
