@@ -4,7 +4,8 @@ import {selectAllCheckins} from '../../reducers/selectors';
 import {fetchAllCheckins} from '../../actions/checkin_actions';
 
 const mapStateToProps = state => ({
-  checkins: selectAllCheckins(state)
+  checkins: selectAllCheckins(state),
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -31,7 +31,7 @@ class CheckinIndex extends React.Component {
     }
     else if(this.props.checkins[0]){
       checkins = this.props.checkins.map((checkin, idx) =>(
-        <CheckinIndexItem history={this.props.history} key={idx} checkin={checkin} />
+        <CheckinIndexItem history={this.props.history} key={idx} checkin={checkin} currentUser={this.props.currentUser}/>
       ));
       return (
         <div className="checkin-list-container">

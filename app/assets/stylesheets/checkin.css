@@ -102,3 +102,9 @@
   justify-content: center;
   margin-bottom: 20px;
 }
+.view-checkin {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  font-weight: bold;
+}

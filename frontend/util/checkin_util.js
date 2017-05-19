@@ -4,3 +4,10 @@ export const fetchAllCheckins = () => (
     url: "api/checkins"
   })
 );
+
+export const fetchOneCheckin = (checkinId) => (
+  $.ajax({
+    method: "GET",
+    url: `/checkins/${checkinId}`
+  })
+);

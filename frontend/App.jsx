@@ -7,6 +7,7 @@ import SignUpFormContainer from './components/auth/sign_up_form_container';
 import BeersIndexContainer from './components/beer/beers_index_container';
 import BeerShowContainer from './components/beer/beer_show_container';
 import NewBeerFormContainer from './components/beer/new_beer_form_container';
+import CheckinShowContainer from './components/checkin/checkin_show_container';
 import Home from './components/home';
 
 const App = () => (
@@ -14,12 +15,13 @@ const App = () => (
     <Switch>
       <AuthRoute exact path ="/signin" component={SignInFormContainer} />
       <AuthRoute exact path ="/signup" component={SignUpFormContainer} />
-      <ProtectedRoute exact path="/home" component={Home} />
       <ProtectedRoute exact path="/beers" component={BeersIndexContainer} />
       <ProtectedRoute exact path="/beers/new" component={NewBeerFormContainer} />
       <ProtectedRoute exact path="/beers/:beerId" component={BeerShowContainer} />
       <ProtectedRoute exact path="/beers/:beerId/edit" component={NewBeerFormContainer} />
+      <ProtectedRoute exact path="/checkins/:checkinId" component={CheckinShowContainer} />
       <AuthRoute exact path="/" component={Splash}/>
+      <ProtectedRoute path="/home" component={Home} />
     </Switch>
   </div>
 );

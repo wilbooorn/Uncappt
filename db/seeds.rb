@@ -34,10 +34,9 @@ checkin2 = Checkin.create(user_id: user3.id, beer_id: beer2.id, rating: 5,
                           review: "This beer is delicious. But I wish my wife was here...", location: "St. Cloud, Minnesota",
                           image_url: "https://res.cloudinary.com/dslok1mwv/image/upload/v1495146941/marshall_beer_txnuxq.jpg")
 
-checkin3 = Checkin.create(user_id: user4.id, beer_id: beer3.id, rating: 5,
+checkin3 = Checkin.create(user_id: user4.id, beer_id: beer3.id, rating: 3,
                           review: "They don't make beer this good in Canada", location: "Hoser Hut",
                           image_url: "https://res.cloudinary.com/dslok1mwv/image/upload/v1495147054/robin_beer_dxgsg0.jpg")
 
 checkin4 = Checkin.create(user_id: user4.id, beer_id: beer1.id, rating: 5,
-                          review: "Patrice really likes this beer. But nobody asked her!", location: "Hoser Hut",
-                          image_url: "https://res.cloudinary.com/dslok1mwv/image/upload/v1495147054/robin_beer_dxgsg0.jpg")
+                          review: "Patrice really likes this beer. But nobody asked her!", location: "Hoser Hut")

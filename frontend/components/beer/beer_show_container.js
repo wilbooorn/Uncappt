@@ -4,7 +4,7 @@ import {requestOneBeer, deleteBeer} from '../../actions/beer_actions';
 import {selectAllCheckins, selectBeerCheckins} from '../../reducers/selectors';
 
 const mapStateToProps = state => ({
-  beer: state.beerInfo.beers,
+  beer: state.beerInfo.beers
 });
 
 const mapDispatchToProps = dispatch => ({
