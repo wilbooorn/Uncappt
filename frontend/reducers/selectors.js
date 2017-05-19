@@ -5,3 +5,8 @@ export const selectAllBeers = state => {
 export const selectAllCheckins = state => {
   return Object.keys(state.checkinInfo.checkins).map(checkinId => state.checkinInfo.checkins[checkinId]);
 };
+
+
+export const selectBeerCheckins = (checkins, beerId) => {
+    checkins.filter(checkin => checkin.beerId === beerId);
+};

@@ -56,6 +56,7 @@ class CheckinIndexItem extends React.Component{
   }
 
   render(){
+
     let beerUrl = `/beers/${this.props.checkin.beer.id}`;
     return(
       <li className = "checkin-show-container">

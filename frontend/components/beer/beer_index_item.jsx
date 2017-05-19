@@ -9,6 +9,8 @@ class BeerIndexItem extends React.Component {
     this.handlePlus = this.handlePlus.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
   }
+  componentWillMount(){
+  }
 
   handleDelete(e){
     e.preventDefault();

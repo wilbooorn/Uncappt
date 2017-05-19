@@ -3,14 +3,11 @@ import NavBarContainer from '../nav_bar_container';
 import BeerIndexItem from './beer_index_item';
 import {Link} from 'react-router-dom';
 import Footer from '../footer';
+import CheckinIndexContainer from '../checkin/checkin_index_container';
 
 class BeerShow extends React.Component {
   constructor(props){
     super(props);
-  }
-
-  componentWillMount(){
-    console.log(this.props);
   }
 
   componentDidMount(){
@@ -24,11 +21,13 @@ class BeerShow extends React.Component {
   }
 
   render(){
+
     if(this.props.beer.name){
       return (
-        <div>
+        <div className="beer-show-container">
           <NavBarContainer history={this.props.history}/>
           <BeerIndexItem page="show" deleteBeer={this.props.deleteBeer} beer={this.props.beer} history={this.props.history} />
+          <CheckinIndexContainer beerCheckins={this.props.beer.checkins} />
           <Link className="back-to-beers" to="/beers">Back to All Beers</Link>
           <Footer />
         </div>
@@ -36,7 +35,7 @@ class BeerShow extends React.Component {
     }
     else{
       return (
-        <div>
+        <div className="beer-show-container">
           <NavBarContainer history={this.props.history}/>
           <div className="error">
             <h1>BEER NOT FOUND :(</h1>

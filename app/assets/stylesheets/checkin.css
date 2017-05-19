@@ -76,6 +76,7 @@
 
 .checkin-info > a {
   margin: 2px;
+  font-weight: bold;
 }
 
 .checkin-rating {

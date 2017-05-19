@@ -3,7 +3,7 @@ CREATE_NEW_BEER, RECEIVE_BEER_ERRORS } from '../actions/beer_actions';
 import merge from 'lodash/merge';
 
 const defaultState = {
-  beers: {},
+  beers: {0:{}},
   errors: []
 };
 

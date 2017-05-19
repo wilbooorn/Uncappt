@@ -6,4 +6,4 @@ json.rating @checkin.rating
 json.location @checkin.location
 json.image_url @checkin.image_url
 json.user @checkin.user
-jsson.beer @checkin.beer
+json.beer @checkin.beer

@@ -127,6 +127,7 @@
   font-size: 28px;
   font-weight: bold;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .back-to-beers:hover {
@@ -170,4 +171,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.beer-show-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100%;
 }

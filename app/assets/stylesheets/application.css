@@ -20,6 +20,10 @@
    background-color: #e5e3df;
  }
 
+ body {
+   height: 100%;
+ }
+
  a {
    text-decoration: none;
    color: #FAC937;
