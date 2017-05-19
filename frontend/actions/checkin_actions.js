@@ -7,7 +7,7 @@ export const receiveAllCheckins = checkins =>({
 });
 
 
-export const fetchAllCheckins = dispatch => {
+export const fetchAllCheckins = () => dispatch => {
   return APIUtil.fetchAllCheckins()
     .then(checkins => dispatch(receiveAllCheckins(checkins)));
 };

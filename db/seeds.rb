@@ -27,7 +27,7 @@ beer3 = Beer.create(name: "Angel City IPA", description: "It’s big. It’s bol
 
 
 checkin1 = Checkin.create(user_id: user2.id, beer_id: beer1.id, rating: 4,
-                          review: "Actually it'spronounced watermel-OH-n", location: "MacLaren's Pub",
+                          review: "Actually it's pronounced watermel-OH-n", location: "MacLaren's Pub",
                           image_url: "http://res.cloudinary.com/dslok1mwv/image/upload/v1495147130/ted_beer_cszqj1.jpg")
 
 checkin2 = Checkin.create(user_id: user3.id, beer_id: beer2.id, rating: 5,

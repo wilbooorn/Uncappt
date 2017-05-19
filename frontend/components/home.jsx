@@ -13,8 +13,8 @@ class Home extends React.Component {
       <div>
         <NavBarContainer history={this.props.history}/>
         <a name="top-of-page"></a>
-        <h1>This is the homepage</h1>
         <CheckinIndexContainer />
+        <div className="push"></div>
         <Footer />
       </div>
     );

@@ -45,7 +45,6 @@
 
 .nav-explore:hover, .left-side-nav:hover {
   text-shadow: 2px 2px black;
-
 }
 
 .nav-profile {
@@ -55,6 +54,10 @@
   margin: auto 0;
   cursor: pointer;
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+}
+
+.nav-profile:hover {
+  box-shadow: 5px 5px 7px 0 rgba(0, 0, 0, 1);
 }
 
 #nav-menu {
