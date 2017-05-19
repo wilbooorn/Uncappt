@@ -42,6 +42,8 @@ class Splash extends React.Component{
              type="video/webm" />
         </video>
 
+        
+
       </div>
     );
   }

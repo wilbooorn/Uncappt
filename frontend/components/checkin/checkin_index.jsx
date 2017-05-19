@@ -18,8 +18,8 @@ class CheckinIndex extends React.Component {
         <CheckinIndexItem history={this.props.history} key={idx} checkin={checkin} />
       ));
       return (
-        <div>
-          <ul>
+        <div className="checkin-list-container">
+          <ul className="checkin-list">
             <div className="all-the-checkins">
               <h1>Global Checkins</h1>
             </div>
