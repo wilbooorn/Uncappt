@@ -8,6 +8,14 @@ export const fetchAllCheckins = () => (
 export const fetchOneCheckin = (checkinId) => (
   $.ajax({
     method: "GET",
-    url: `/checkins/${checkinId}`
+    url: `api/checkins/${checkinId}`
+  })
+);
+
+
+export const deleteCheckin = (checkinId) => (
+  $.ajax({
+    method: "DELETE",
+    url: `api/checkins/${checkinId}`
   })
 );

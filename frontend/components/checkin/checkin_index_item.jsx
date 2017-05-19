@@ -62,16 +62,19 @@ class CheckinIndexItem extends React.Component{
 
   render(){
     let editLink = `/checkins/${this.props.checkin.id}/edit`;
-    let auth = <div></div>;
-    if (this.props.currentUser.id === this.props.checkin.user_id){
-      auth = <div className = 'checkin-auth'>
-        <Link to={editLink}>Edit Checkin</Link>
-        <h4 onClick={this.handleDelete} className="checkin-delete">Delete Checkin</h4>
-      </div>;
+    let authInfo = <div></div>;
+    if (this.props.currentUser){
+      if (this.props.currentUser.id === this.props.checkin.user_id && this.props.page){
+        authInfo = <div className = 'checkin-auth'>
+          <Link to={editLink}>Edit Checkin</Link>
+          <h4 onClick={this.handleDelete} className="checkin-delete">Delete Checkin</h4>
+        </div>;
+      }
     }
 
     let beerUrl = `/beers/${this.props.checkin.beer.id}`;
     let viewLink = `/checkins/${this.props.checkin.id}`;
+    console.log(this.props);
     return(
       <li className = "checkin-show-container">
         <div className = 'checkin-pic-info'>
@@ -105,6 +108,7 @@ class CheckinIndexItem extends React.Component{
         </div>
         <div className="view-checkin">
           <Link to={viewLink}>View Checkin</Link>
+          {authInfo}
         </div>
       </li>
     );

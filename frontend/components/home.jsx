@@ -13,7 +13,7 @@ class Home extends React.Component {
       <div className = "home-container">
         <NavBarContainer history={this.props.history}/>
         <a name="top-of-page"></a>
-        <CheckinIndexContainer />
+        <CheckinIndexContainer currentUser={this.props.currentUser} />
         <Footer />
       </div>
     );

@@ -104,7 +104,23 @@
 }
 .view-checkin {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   padding: 10px;
   font-weight: bold;
+  align-items: center;
+  align-content: center;
+}
+
+.checkin-show {
+  margin-top: 50px;
+}
+
+.checkin-auth {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.checkin-auth > a {
+  margin-right: 10px;
 }

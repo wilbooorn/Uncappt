@@ -8,7 +8,7 @@ import BeersIndexContainer from './components/beer/beers_index_container';
 import BeerShowContainer from './components/beer/beer_show_container';
 import NewBeerFormContainer from './components/beer/new_beer_form_container';
 import CheckinShowContainer from './components/checkin/checkin_show_container';
-import Home from './components/home';
+import HomeContainer from './components/home_container';
 
 const App = () => (
   <div>
@@ -21,7 +21,7 @@ const App = () => (
       <ProtectedRoute exact path="/beers/:beerId/edit" component={NewBeerFormContainer} />
       <ProtectedRoute exact path="/checkins/:checkinId" component={CheckinShowContainer} />
       <AuthRoute exact path="/" component={Splash}/>
-      <ProtectedRoute path="/home" component={Home} />
+      <ProtectedRoute path="/home" component={HomeContainer} />
     </Switch>
   </div>
 );

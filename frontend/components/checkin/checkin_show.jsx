@@ -8,14 +8,27 @@ class CheckinShow extends React.Component {
     super(props);
   }
 
+  componentDidMount(){
+    this.props.fetchOneCheckin(this.props.match.params.checkinId);
+  }
+
   render(){
-    return (
-      <div>
-        <NavBarContainer history={this.props.history} />
-        <h1>Checkin Show</h1>
-        <Footer />
-      </div>
-    );
+    if(this.props.checkin.id){
+      return (
+        <div>
+          <NavBarContainer history={this.props.history} />
+          <div className="checkin-list-container">
+            <ul className = 'checkin-list checkin-show'>
+              <CheckinIndexItem page="show" checkin={this.props.checkin} deleteCheckin={this.props.deleteCheckin} history={this.props.history} currentUser={this.props.currentUser}/>
+            </ul>
+          </div>
+          <Footer />
+        </div>
+      );
+    }
+    else{
+      return <div></div>;
+    }
   }
 }
 

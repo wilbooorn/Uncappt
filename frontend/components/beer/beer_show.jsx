@@ -27,7 +27,7 @@ class BeerShow extends React.Component {
         <div className="beer-show-container">
           <NavBarContainer history={this.props.history}/>
           <BeerIndexItem page="show" deleteBeer={this.props.deleteBeer} beer={this.props.beer} history={this.props.history} />
-          <CheckinIndexContainer beerCheckins={this.props.beer.checkins} />
+          <CheckinIndexContainer beerCheckins={this.props.beer.checkins} currentUser={this.props.currentUser}/>
           <Link className="back-to-beers" to="/beers">Back to All Beers</Link>
           <Footer />
         </div>

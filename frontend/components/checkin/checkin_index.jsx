@@ -14,9 +14,8 @@ class CheckinIndex extends React.Component {
   render(){
     let checkins;
     if (this.props.beerCheckins){
-      console.log(this.props.beerCheckins);
       checkins = this.props.beerCheckins.map((checkin, idx) =>(
-        <CheckinIndexItem history={this.props.history} key={idx} checkin={checkin} />
+        <CheckinIndexItem history={this.props.history} key={idx} checkin={checkin} currentUser={this.props.currentUser}/>
       ));
       return (
         <div className="checkin-list-container">
@@ -30,6 +29,7 @@ class CheckinIndex extends React.Component {
       );
     }
     else if(this.props.checkins[0]){
+      console.log(this.props.checkins);
       checkins = this.props.checkins.map((checkin, idx) =>(
         <CheckinIndexItem history={this.props.history} key={idx} checkin={checkin} currentUser={this.props.currentUser}/>
       ));

@@ -1,13 +1,15 @@
 import {connect} from 'react-redux';
 import CheckinShow from './checkin_show';
-import {fetchOneCheckin} from "../../action/checkin_actions";
+import {fetchOneCheckin, deleteCheckin} from "../../actions/checkin_actions";
 
 const mapStateToProps = state => ({
-  checkin: state.checkinInfo.checkins
+  checkin: state.checkinInfo.checkins,
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchOneCheckin: (checkinId) => fetchOneCheckin(checkinId)
+  fetchOneCheckin: (checkinId) => dispatch(fetchOneCheckin(checkinId)),
+  deleteCheckin: (checkinId) => dispatch(deleteCheckin(checkinId))
 });
 
 export default connect(
