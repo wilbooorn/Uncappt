@@ -32,7 +32,6 @@ class BeersIndex extends React.Component {
               <Link className="link" to="/beers/new">Add You Favorite Beer</Link>
             </div>
           </ul>
-          <div class="push"></div>
           <Footer />
         </div>
       );

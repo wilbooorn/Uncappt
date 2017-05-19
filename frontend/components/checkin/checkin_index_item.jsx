@@ -11,46 +11,46 @@ class CheckinIndexItem extends React.Component{
   calculateRating(rating){
     if(rating === 1){
       return <div className = 'checkin-rating'>
-        <img id="gold" src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-        <img src="http://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
-        <img src="http://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
-        <img src="http://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
-        <img src="http://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
+        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
+        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
+        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
+        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
+        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
       </div>;
     }else if (rating === 2){
       return <div className = 'checkin-rating'>
-        <img id="gold" src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-        <img id="gold" src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-        <img src="http://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
-        <img src="http://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
-        <img src="http://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
+        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
+        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
+        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
+        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
+        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
       </div>;
     }
     else if (rating === 3){
       return <div className = 'checkin-rating'>
-        <img id="gold" src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-        <img id="gold" src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-        <img id="gold" src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-        <img src="http://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
-        <img src="http://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
+        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
+        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
+        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
+        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
+        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
       </div>;
     }
     else if (rating === 4){
       return <div className = 'checkin-rating'>
-        <img id="gold" src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-        <img id="gold" src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-        <img id="gold" src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-        <img id="gold" src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-        <img src="http://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
+        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
+        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
+        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
+        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
+        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
       </div>;
     }
     else{
       return <div className = 'checkin-rating'>
-        <img id="gold" src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-        <img id="gold" src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-        <img id="gold" src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-        <img id="gold" src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-        <img id="gold" src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
+        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
+        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
+        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
+        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
+        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
       </div>;
     }
   }
@@ -82,7 +82,7 @@ class CheckinIndexItem extends React.Component{
             </div>
 
             <div className='checkin-img-container'>
-              <img className="checkin-img" src={this.props.checkin.image_url} />
+              <img className="checkin-img" src={this.props.checkin.image_url} alt="checkin image" />
             </div>
 
           </div>

@@ -49,6 +49,20 @@
    transition: 1s opacity;
  }
 
+ .home-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+
+}
+
+.home-container > a {
+  margin: 0 auto;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
  #signin-username, #signin-password, #signup-username,
   #signup-password, #signup-location {
    height: 60px;

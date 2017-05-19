@@ -10,11 +10,10 @@ class Home extends React.Component {
 
   render(){
     return (
-      <div>
+      <div className = "home-container">
         <NavBarContainer history={this.props.history}/>
         <a name="top-of-page"></a>
         <CheckinIndexContainer />
-        <div className="push"></div>
         <Footer />
       </div>
     );

@@ -63,7 +63,7 @@ class NewBeerForm extends React.Component {
       });
     }
     else if(this.state.image_url === ""){
-        this.setState({image_url: "http://res.cloudinary.com/dslok1mwv/image/upload/v1495061245/bkwvbdxkybjgwtw0zplp.png"}, ()=> {
+        this.setState({image_url: "https://res.cloudinary.com/dslok1mwv/image/upload/v1495061245/bkwvbdxkybjgwtw0zplp.png"}, ()=> {
           this.props.createNewBeer(this.state);
           this.props.history.push("/beers");
         });
