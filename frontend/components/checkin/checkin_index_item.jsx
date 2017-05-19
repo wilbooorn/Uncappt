@@ -6,9 +6,10 @@ class CheckinIndexItem extends React.Component{
   }
 
   render(){
+    console.log(this.props.checkin.user);
     return(
       <li>
-        {this.props.checkin.review}
+        <p>{this.props.checkin.review}</p>
       </li>
     );
   }

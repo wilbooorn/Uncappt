@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   attr_reader :password
 
-  has_many :checkins
+  has_many :checkins, dependent: :destroy
 
   validates :username, :password_digest, :session_token, presence: true
   validates :password, length: { minimum: 6 }, allow_nil: true
