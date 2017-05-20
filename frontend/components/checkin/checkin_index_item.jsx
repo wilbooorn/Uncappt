@@ -56,7 +56,6 @@ class CheckinIndexItem extends React.Component{
   }
 
   render(){
-
     let viewCheckin = <div></div>;
     if (!this.props.path){
       let viewUrl = `/checkins/${this.props.checkin.id}`;

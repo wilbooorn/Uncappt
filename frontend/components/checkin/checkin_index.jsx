@@ -30,19 +30,24 @@ class CheckinIndex extends React.Component {
       );
     }
     else if(this.props.checkins[0]){
-      checkins = this.props.checkins.map((checkin, idx) =>(
-        <CheckinIndexItem history={this.props.history} key={idx} checkin={checkin} />
-      ));
-      return (
-        <div className="checkin-list-container">
-          <ul className="checkin-list">
-            <div className="all-the-checkins">
-              <h1>Global Checkins</h1>
-            </div>
-            {checkins}
-          </ul>
-        </div>
-      );
+      if(this.props.checkins[0].id){
+        checkins = this.props.checkins.map((checkin, idx) =>(
+          <CheckinIndexItem history={this.props.history} key={idx} checkin={checkin} />
+        ));
+        return (
+          <div className="checkin-list-container">
+            <ul className="checkin-list">
+              <div className="all-the-checkins">
+                <h1>Global Checkins</h1>
+              </div>
+              {checkins}
+            </ul>
+          </div>
+        );
+      }
+      else{
+        return <div></div>;
+      }
     }
     else{
       return <div></div>;
