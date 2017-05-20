@@ -8,7 +8,12 @@ class CheckinShow extends React.Component {
     super(props);
   }
 
+  componentDidMount(){
+    this.props.fetchOneCheckin(this.props.match.params.checkinId);
+  }
+
   render(){
+    console.log(this.props.checkin);
     return (
       <div>
         <NavBarContainer history={this.props.history} />

@@ -102,3 +102,12 @@
   justify-content: center;
   margin-bottom: 20px;
 }
+
+.view-checkin {
+  margin: 10px;
+  font-weight: bold;
+}
+
+.view-checkin:hover {
+  color: black;
+}

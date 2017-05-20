@@ -57,6 +57,12 @@ class CheckinIndexItem extends React.Component{
 
   render(){
 
+    let viewCheckin = <div></div>;
+    if (!this.props.path){
+      let viewUrl = `/checkins/${this.props.checkin.id}`;
+      viewCheckin = <Link className="view-checkin" to={viewUrl}>View Checkin</Link>;
+    }
+
     let beerUrl = `/beers/${this.props.checkin.beer.id}`;
     return(
       <li className = "checkin-show-container">
@@ -89,7 +95,7 @@ class CheckinIndexItem extends React.Component{
           </div>
 
         </div>
-
+        {viewCheckin}
       </li>
     );
   }
