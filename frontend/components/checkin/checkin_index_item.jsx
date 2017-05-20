@@ -74,7 +74,6 @@ class CheckinIndexItem extends React.Component{
 
     let beerUrl = `/beers/${this.props.checkin.beer.id}`;
     let viewLink = `/checkins/${this.props.checkin.id}`;
-    console.log(this.props);
     return(
       <li className = "checkin-show-container">
         <div className = 'checkin-pic-info'>

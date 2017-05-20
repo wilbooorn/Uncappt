@@ -26,7 +26,9 @@ export const receiveCheckinErrors = errors => ({
 
 export const fetchAllCheckins = () => dispatch => {
   return APIUtil.fetchAllCheckins()
-    .then(checkins => dispatch(receiveAllCheckins(checkins)));
+    .then(checkins => {
+      dispatch(receiveAllCheckins(checkins));
+    });
 };
 
 export const fetchOneCheckin = (checkinId) => dispatch => {

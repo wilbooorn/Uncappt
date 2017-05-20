@@ -4,7 +4,7 @@ import {requestOneBeer, deleteBeer} from '../../actions/beer_actions';
 import {selectAllCheckins, selectBeerCheckins} from '../../reducers/selectors';
 
 const mapStateToProps = state => ({
-  beer: state.beerInfo.beers,
+  beers: state.beerInfo.beers,
   currentUser: state.session.currentUser
 });
 

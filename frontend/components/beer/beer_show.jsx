@@ -10,10 +10,6 @@ class BeerShow extends React.Component {
     super(props);
   }
 
-  componentDidMount(){
-    this.props.requestOneBeer(this.props.match.params.beerId);
-  }
-
   componentWillReceiveProps(newProps){
     if(newProps.match.params.beerId !== this.props.match.params.beerId){
       this.props.requestOneBeer(newProps.match.params.beerId);
@@ -21,13 +17,14 @@ class BeerShow extends React.Component {
   }
 
   render(){
-
-    if(this.props.beer.name){
+    const beer = this.props.beers[this.props.match.params.beerId];
+    console.log(beer);
+    if(beer){
       return (
         <div className="beer-show-container">
           <NavBarContainer history={this.props.history}/>
-          <BeerIndexItem page="show" deleteBeer={this.props.deleteBeer} beer={this.props.beer} history={this.props.history} />
-          <CheckinIndexContainer beerCheckins={this.props.beer.checkins} currentUser={this.props.currentUser}/>
+          <BeerIndexItem page="show" deleteBeer={this.props.deleteBeer} beer={beer} history={this.props.history} />
+          <CheckinIndexContainer beerCheckins={beer.checkins} currentUser={this.props.currentUser}/>
           <Link className="back-to-beers" to="/beers">Back to All Beers</Link>
           <Footer />
         </div>

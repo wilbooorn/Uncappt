@@ -7,13 +7,15 @@ class CheckinIndex extends React.Component {
     super(props);
   }
 
-  componentDidMount(){
+  componentWillMount(){
+    ("Fetching checkins");
     this.props.fetchAllCheckins();
   }
 
   render(){
     let checkins;
     if (this.props.beerCheckins){
+      console.log(this.props);
       checkins = this.props.beerCheckins.map((checkin, idx) =>(
         <CheckinIndexItem history={this.props.history} key={idx} checkin={checkin} currentUser={this.props.currentUser}/>
       ));
@@ -29,7 +31,6 @@ class CheckinIndex extends React.Component {
       );
     }
     else if(this.props.checkins[0]){
-      console.log(this.props.checkins);
       checkins = this.props.checkins.map((checkin, idx) =>(
         <CheckinIndexItem history={this.props.history} key={idx} checkin={checkin} currentUser={this.props.currentUser}/>
       ));

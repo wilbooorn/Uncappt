@@ -3,6 +3,8 @@ export const selectAllBeers = state => {
 };
 
 export const selectAllCheckins = state => {
+  ("HELLO");
+  (state.checkinInfo);
   return Object.keys(state.checkinInfo.checkins).map(checkinId => state.checkinInfo.checkins[checkinId]);
 };
 

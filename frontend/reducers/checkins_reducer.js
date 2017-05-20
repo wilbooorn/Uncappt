@@ -7,19 +7,16 @@ const defaultState = {
   errrors: []
 };
 
+
 const CheckinsReducer = (state = defaultState, action) => {
   Object.freeze(state);
   let newState;
   switch(action.type){
     case RECEIVE_ALL_CHECKINS:
-      newState = merge({}, state);
-      newState.checkins = action.checkins;
-      return newState;
+      return {checkins:action.checkins, errors: []};
 
     case RECEIVE_ONE_CHECKIN:
-      newState = merge({}, state);
-      newState.checkins = action.checkin;
-      return newState;
+      return {checkins:action.checkin, errors: []};
 
     case DELETE_CHECKIN:
       newState = merge({}, state);
@@ -27,7 +24,7 @@ const CheckinsReducer = (state = defaultState, action) => {
       return newState;
 
     case RECEIVE_CHECKIN_ERRORS:
-      console.log("An error");
+      ("An error");
       newState = merge({}, state);
       newState.errors = action.errors;
       return newState;

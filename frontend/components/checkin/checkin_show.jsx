@@ -8,18 +8,15 @@ class CheckinShow extends React.Component {
     super(props);
   }
 
-  componentDidMount(){
-    this.props.fetchOneCheckin(this.props.match.params.checkinId);
-  }
-
   render(){
-    if(this.props.checkin.id){
+    const checkin = this.props.checkins[this.props.match.params.checkinId];
+    if(checkin){
       return (
         <div>
           <NavBarContainer history={this.props.history} />
           <div className="checkin-list-container">
             <ul className = 'checkin-list checkin-show'>
-              <CheckinIndexItem page="show" checkin={this.props.checkin} deleteCheckin={this.props.deleteCheckin} history={this.props.history} currentUser={this.props.currentUser}/>
+              <CheckinIndexItem page="show" checkin={checkin} deleteCheckin={this.props.deleteCheckin} history={this.props.history} currentUser={this.props.currentUser}/>
             </ul>
           </div>
           <Footer />

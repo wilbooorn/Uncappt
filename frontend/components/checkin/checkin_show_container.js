@@ -3,7 +3,7 @@ import CheckinShow from './checkin_show';
 import {fetchOneCheckin, deleteCheckin} from "../../actions/checkin_actions";
 
 const mapStateToProps = state => ({
-  checkin: state.checkinInfo.checkins,
+  checkins: state.checkinInfo.checkins,
   currentUser: state.session.currentUser
 });
 

@@ -40,8 +40,8 @@ const BeersReducer = (state = defaultState, action) => {
       return newState;
 
     case RECEIVE_BEER_ERRORS:
-      console.log("AN ERROR HAPPENED");
-      console.log(action.errors);
+      ("AN ERROR HAPPENED");
+      (action.errors);
       newState = merge({}, state);
       newState.errors = action.errors;
       return newState;
