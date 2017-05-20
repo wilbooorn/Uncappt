@@ -14,13 +14,27 @@ class CheckinShow extends React.Component {
 
   render(){
     console.log(this.props.checkin);
-    return (
-      <div>
-        <NavBarContainer history={this.props.history} />
-        <h1>Checkin Show</h1>
-        <Footer />
-      </div>
-    );
+    if(this.props.checkin.id){
+      return (
+        <div>
+          <NavBarContainer history={this.props.history} />
+          <div className="checkin-show-box">
+            <CheckinIndexItem path="show" checkin={this.props.checkin} history={this.props.history}/>
+          </div>
+          <Footer />
+        </div>
+      );
+    }
+    else{
+      return (
+        <div>
+          <NavBarContainer history={this.props.history} />
+          <p>Checkin not found</p>
+          <Footer />
+        </div>
+      );
+    }
+
   }
 }
 

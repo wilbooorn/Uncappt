@@ -111,3 +111,14 @@
 .view-checkin:hover {
   color: black;
 }
+
+.checkin-show-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  list-style: none;
+  width: 50%;
+  margin: 50px auto;
+}
