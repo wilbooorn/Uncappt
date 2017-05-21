@@ -34,11 +34,15 @@ class BeerShow extends React.Component {
       );
     }
     else{
+      let message = "Loading...";
+      setTimeout(() => {
+        message = "Beer Not Found"}, 1000
+       );
       return (
         <div className="beer-show-container">
           <NavBarContainer history={this.props.history}/>
           <div className="error">
-            <h1>BEER NOT FOUND :(</h1>
+            <h1>{message}</h1>
 
             <div className="back-to-beers">
               <Link className='back-to-beers-link' to="/beers/">Back to All Beers</Link>
