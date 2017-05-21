@@ -8,6 +8,7 @@ import CheckinIndexContainer from '../checkin/checkin_index_container';
 class BeerShow extends React.Component {
   constructor(props){
     super(props);
+    this.state = {message: "Loading..."};
   }
 
   componentDidMount(){
@@ -18,6 +19,9 @@ class BeerShow extends React.Component {
     if(newProps.match.params.beerId !== this.props.match.params.beerId){
       this.props.requestOneBeer(newProps.match.params.beerId);
     }
+    setTimeout(() => {
+      this.setState({message:"Beer Not Found"});
+    }, 1000);
   }
 
   render(){
@@ -34,15 +38,12 @@ class BeerShow extends React.Component {
       );
     }
     else{
-      let message = "Loading...";
-      setTimeout(() => {
-        message = "Beer Not Found"}, 1000
-       );
+
       return (
         <div className="beer-show-container">
           <NavBarContainer history={this.props.history}/>
           <div className="error">
-            <h1>{message}</h1>
+            <h1>{this.state.message}</h1>
 
             <div className="back-to-beers">
               <Link className='back-to-beers-link' to="/beers/">Back to All Beers</Link>
