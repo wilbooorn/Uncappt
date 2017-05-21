@@ -39,5 +39,5 @@ checkin3 = Checkin.create(user_id: user4.id, beer_id: beer3.id, rating: 3,
                           image_url: "https://res.cloudinary.com/dslok1mwv/image/upload/v1495147054/robin_beer_dxgsg0.jpg")
 
 checkin4 = Checkin.create(user_id: user4.id, beer_id: beer1.id, rating: 5,
-                          review: "Patrice really looks this beer. But nobody asked her!", location: "Hoser Hut",
+                          review: "Patrice really likes this beer. But nobody asked her!", location: "Hoser Hut",
                           image_url: "https://res.cloudinary.com/dslok1mwv/image/upload/v1495147054/robin_beer_dxgsg0.jpg")
