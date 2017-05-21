@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBarContainer from '../nav_bar_container';
-import CheckinIndexItem from './checkin_index_item';
+import CheckinIndexItemContainer from './checkin_index_item_container';
 
 class CheckinIndex extends React.Component {
   constructor(props){
@@ -16,7 +16,7 @@ class CheckinIndex extends React.Component {
     if (this.props.beerCheckins){
       console.log(this.props.beerCheckins);
       checkins = this.props.beerCheckins.map((checkin, idx) =>(
-        <CheckinIndexItem history={this.props.history} key={idx} checkin={checkin} />
+        <CheckinIndexItemContainer history={this.props.history} key={idx} checkin={checkin} />
       ));
       return (
         <div className="checkin-list-container">
@@ -32,7 +32,7 @@ class CheckinIndex extends React.Component {
     else if(this.props.checkins[0]){
       if(this.props.checkins[0].id){
         checkins = this.props.checkins.map((checkin, idx) =>(
-          <CheckinIndexItem history={this.props.history} key={idx} checkin={checkin} />
+          <CheckinIndexItemContainer history={this.props.history} key={idx} checkin={checkin} />
         ));
         return (
           <div className="checkin-list-container">

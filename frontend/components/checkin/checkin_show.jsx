@@ -1,5 +1,5 @@
 import React from 'react';
-import CheckinIndexItem from './checkin_index_item';
+import CheckinIndexItemContainer from './checkin_index_item_container';
 import NavBarContainer from '../nav_bar_container';
 import Footer from '../footer';
 
@@ -19,7 +19,7 @@ class CheckinShow extends React.Component {
         <div>
           <NavBarContainer history={this.props.history} />
           <div className="checkin-show-box">
-            <CheckinIndexItem path="show" checkin={this.props.checkin} history={this.props.history}/>
+            <CheckinIndexItemContainer path="show" checkin={this.props.checkin} history={this.props.history}/>
           </div>
           <Footer />
         </div>

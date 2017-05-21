@@ -37,12 +37,12 @@ class Splash extends React.Component{
 
         <video autoPlay loop id="vid"
           poster="https://res.cloudinary.com/dslok1mwv/image/upload/v1494966533/beer3_cdlhxc.png">
-          <source src="/assets/beer3.mp4" type="video/mp4" />
+          <source src="https://s3-us-west-1.amazonaws.com/untappd-vid/Beer+Pour+H264.mp4" type="video/mp4" />
           <source src="https://res.cloudinary.com/dslok1mwv/video/upload/v1494966540/beer3_snrkmy.webm"
              type="video/webm" />
         </video>
 
-        
+
 
       </div>
     );
