@@ -23,6 +23,7 @@ const App = () => (
       <ProtectedRoute exact path="/beers/:beerId/edit" component={NewBeerFormContainer} />
       <ProtectedRoute exact path="/checkins/:checkinId" component={CheckinShowContainer} />
       <ProtectedRoute exact path="/checkins/:beerId/new" component={NewCheckinModalContainer} />
+      <ProtectedRoute exact path="/checkins/:checkinId/edit" component={NewCheckinModalContainer} />
       <AuthRoute exact path="/" component={Splash}/>
     </Switch>
   </div>

@@ -15,20 +15,51 @@ class NewCheckinModal extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidMount(){
+  componentWillMount(){
     this.props.requestOneBeer(this.props.match.params.beerId);
+    if(this.props.match.params.checkinId){
+      this.props.fetchOneCheckin(this.props.match.params.checkinId);
+      this.text = "Update Checkin";
+      this.photoText = "Edit Photo";
+    }
+    else{
+      this.text = "Checkin";
+      this.photoText = "Add Photo";
+    }
+  }
+
+  componentWillReceiveProps(nextProps){
+    if(nextProps.checkin.id){
+      this.setState({
+        review:nextProps.checkin.review,
+        rating:nextProps.checkin.rating,
+        location:nextProps.checkin.location,
+        image_url:nextProps.checkin.image_url,
+        beer_id: nextProps.checkin.beer_id
+      });
+    }
   }
 
   handleCancel(e){
     e.preventDefault();
-    this.props.history.push("/beers");
+    this.props.history.push("/home");
   }
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.createNewCheckin(this.state).then(() => {
-      this.props.history.push("/home");
-    });
+    if (this.props.match.params.beerId){
+      this.props.createNewCheckin(this.state).then(() => {
+        this.props.history.push("/home");
+      });
+    }
+    else{
+      let url = `/checkins/${this.props.checkin.id}`;
+      this.setState({id: this.props.checkin.id}, () => {
+        this.props.updateCheckin(this.state).then(() => {
+          this.props.history.push(url);
+        });
+      });
+    }
   }
 
   review(e){
@@ -96,13 +127,13 @@ class NewCheckinModal extends React.Component {
             placeholder="Where'd you try it?" />
 
           <div className="new-beer-image-container">
-            <UploadButton postImage={this.postImage} text="Upload photo"/>
+            <UploadButton postImage={this.postImage} text={this.photoText}/>
             {image}
           </div>
 
           <div className = "new-checkin-buttons">
             <button onClick={this.handleSubmit}
-              className="new-checkin-button">Checkin!</button>
+              className="new-checkin-button">{this.text}</button>
 
             <button onClick={this.handleCancel}
               className="cancel-checkin-button">Cancel</button>

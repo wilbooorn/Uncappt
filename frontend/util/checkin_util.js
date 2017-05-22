@@ -26,3 +26,11 @@ export const deleteCheckin = checkinId => (
     url: `/api/checkins/${checkinId}`
   })
 );
+
+export const editCheckin = checkin => (
+  $.ajax({
+    method: "PATCH",
+    url: `/api/checkins/${checkin.id}`,
+    data: {checkin}
+  })
+);
