@@ -4,7 +4,7 @@ export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 
 export const signin = (user) => dispatch => {
-  return APIUtil.signin(user).then(() => dispatch(receiveCurrentUser(user)))
+  return APIUtil.signin(user).then((newUser) => dispatch(receiveCurrentUser(newUser)))
   .fail(error => dispatch(receiveErrors(error.responseJSON)));
 };
 

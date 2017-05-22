@@ -38,6 +38,7 @@ class NavBar extends React.Component {
   }
 
   render(){
+    debugger
     let imageUrl;
     if(this.props.currentUser.image_url) {
       console.log(this.props.currentUser.image_url);
