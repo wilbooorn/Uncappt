@@ -105,7 +105,7 @@ class CheckinIndexItem extends React.Component{
             </div>
 
             <div className='checkin-img-container'>
-              <img className="checkin-img" src={this.props.checkin.image_url} alt="checkin image" />
+              <img className="checkin-img" src={this.props.checkin.image_url} />
             </div>
 
           </div>
