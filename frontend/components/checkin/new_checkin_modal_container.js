@@ -7,7 +7,8 @@ updateCheckin} from '../../actions/checkin_actions';
 const mapStateToProps = state => ({
   currentUser: state.session.currentUser,
   beer: state.beerInfo.beers,
-  checkin: state.checkinInfo.checkins
+  checkin: state.checkinInfo.checkins,
+  errors: state.checkinInfo.errors
 });
 
 const mapDispatchToProps = dispatch => ({

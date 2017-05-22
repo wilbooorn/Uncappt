@@ -4,7 +4,7 @@ import UploadButton from '../upload_button';
 class NewCheckinModal extends React.Component {
   constructor(props){
     super(props);
-    this.state={review:"", rating:0, location:"", image_url: "",
+    this.state={review:"", rating:"", location:"", image_url: "",
     beer_id:this.props.match.params.beerId, user_id:this.props.currentUser.id};
 
     this.review = this.review.bind(this);
@@ -93,6 +93,7 @@ class NewCheckinModal extends React.Component {
   }
 
   render(){
+    console.log(this.props.errors);
     let image = <div></div>;
     if (this.state.image_url !== ""){
       image = <img className="new-checkin-image" src={this.state.image_url} />;
@@ -107,6 +108,7 @@ class NewCheckinModal extends React.Component {
         <form className="checkin-form">
           <h1 className="new-checkin-title">UNCAPP'T</h1>
           <h3 className="checkin-text">{text}</h3>
+          <p className="errors">{this.props.errors}</p>
           <input id="checkin-review" type="text"
             value={this.state.review} onChange={this.review}
             placeholder=" What did you think?" />

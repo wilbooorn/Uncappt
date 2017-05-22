@@ -47,7 +47,8 @@ export const fetchOneCheckin = (checkinId) => dispatch => {
 
 export const createNewCheckin = checkin => dispatch => {
   return APIUtil.createNewCheckin(checkin)
-    .then(newCheckin => dispatch(sendOneCheckin(newCheckin)));
+    .then(newCheckin => dispatch(sendOneCheckin(newCheckin)),
+    error => dispatch(receiveCheckinErrors(error.responseJSON)));
 };
 
 export const deleteCheckin = checkinId => dispatch => {
@@ -57,5 +58,6 @@ export const deleteCheckin = checkinId => dispatch => {
 
 export const updateCheckin = checkin => dispatch => {
   return APIUtil.editCheckin(checkin)
-    .then(newCheckin => dispatch(updateOneCheckin(checkin)));
+    .then(newCheckin => dispatch(updateOneCheckin(checkin)),
+    error => dispatch(receiveCheckinErrors(error.responseJSON)));
 };
