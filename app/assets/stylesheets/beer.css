@@ -89,6 +89,26 @@
   justify-content: center;
 }
 
+.beer-plus {
+  display: flex;
+  position: relative;
+}
+
+#hidden-hover {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 5px;
+  background-color: #FAC937;
+  font-weight: bold;
+}
+
+.dont-show {
+  display: none;
+}
+
 .beer-plus-img {
   font-size: 56px;
   background: transparent;
@@ -180,4 +200,8 @@
   justify-content: space-between;
   flex-direction: column;
   min-height: 100%;
+}
+
+.load-message {
+  margin-bottom: 50px;
 }

@@ -40,6 +40,7 @@ class NavBar extends React.Component {
   render(){
     let imageUrl;
     if(this.props.currentUser.image_url) {
+      console.log(this.props.currentUser.image_url);
       imageUrl = this.props.currentUser.image_url;
     } else {
       imageUrl = "https://res.cloudinary.com/dslok1mwv/image/upload/v1494966538/stock_pic_yucizf.png";

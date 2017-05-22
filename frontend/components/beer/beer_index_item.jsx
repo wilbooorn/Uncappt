@@ -8,8 +8,13 @@ class BeerIndexItem extends React.Component {
     this.handleTitleClick = this.handleTitleClick.bind(this);
     this.handlePlus = this.handlePlus.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+    this.toggleText = this.toggleText.bind(this);
   }
   componentWillMount(){
+  }
+
+  toggleText(){
+    document.getElementById('hidden-hover').classList.toggle("dont-show");
   }
 
   handleDelete(e){
@@ -26,7 +31,8 @@ class BeerIndexItem extends React.Component {
 
   handlePlus(e){
     e.preventDefault();
-    alert("Check-Ins not implemented yet!");
+    let url = `/checkins/${this.props.beer.id}/new`;
+    this.props.history.push(url);
   }
 
   render(){
@@ -55,7 +61,10 @@ class BeerIndexItem extends React.Component {
                   <p className="beer-brewery">{this.props.beer.brewery}</p>
                 </div>
                 <div className="beer-plus">
-                  <p onClick={this.handlePlus} className="beer-plus-img">+</p>
+                  <p onClick={this.handlePlus}
+                    onMouseEnter={this.toggleText} onMouseLeave={this.toggleText}
+                    className="beer-plus-img">+</p>
+                  <p id="hidden-hover" className="dont-show">Checkin this beer</p>
                 </div>
               </div>
               <p className="beer-style">{this.props.beer.style}</p>

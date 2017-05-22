@@ -43,7 +43,7 @@ class BeerShow extends React.Component {
         <div className="beer-show-container">
           <NavBarContainer history={this.props.history}/>
           <div className="error">
-            <h1>{this.state.message}</h1>
+            <h1 className="load-message">{this.state.message}</h1>
 
             <div className="back-to-beers">
               <Link className='back-to-beers-link' to="/beers/">Back to All Beers</Link>

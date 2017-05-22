@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 import NewCheckinModal from './new_checkin_modal';
 
 const mapStateToProps = state => ({
-
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({

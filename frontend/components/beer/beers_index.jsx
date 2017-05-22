@@ -29,7 +29,7 @@ class BeersIndex extends React.Component {
             {beers}
             <div className="add-beer-show">
               <p className="dif-member">Can't find what you're looking for?</p>
-              <Link className="link" to="/beers/new">Add You Favorite Beer</Link>
+              <Link className="link" to="/beers/new">Add Your Favorite Beer</Link>
             </div>
           </ul>
           <Footer />
