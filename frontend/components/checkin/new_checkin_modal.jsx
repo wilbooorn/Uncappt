@@ -4,10 +4,10 @@ import UploadButton from '../upload_button';
 class NewCheckinModal extends React.Component {
   constructor(props){
     super(props);
-    this.state={comment:"", rating:0, location:"", image_url: "",
+    this.state={review:"", rating:0, location:"", image_url: "",
     beer_id:this.props.match.params.beerId, user_id:this.props.currentUser.id};
 
-    this.comment = this.comment.bind(this);
+    this.review = this.review.bind(this);
     this.location = this.location.bind(this);
     this.rating = this.rating.bind(this);
     this.postImage = this.postImage.bind(this);
@@ -26,12 +26,15 @@ class NewCheckinModal extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
+    this.props.createNewCheckin(this.state).then(() => {
+      this.props.history.push("/home");
+    });
   }
 
-  comment(e){
+  review(e){
     e.preventDefault();
-    let comment = document.getElementById("checkin-comment").value;
-    this.setState({comment});
+    let review = document.getElementById("checkin-review").value;
+    this.setState({review});
   }
 
   location(e){
@@ -73,8 +76,8 @@ class NewCheckinModal extends React.Component {
         <form className="checkin-form">
           <h1 className="new-checkin-title">UNCAPP'T</h1>
           <h3 className="checkin-text">{text}</h3>
-          <input id="checkin-comment" type="text"
-            value={this.state.comment} onChange={this.comment}
+          <input id="checkin-review" type="text"
+            value={this.state.review} onChange={this.review}
             placeholder=" What did you think?" />
 
           <h2 className="checkin-rating-title">Rating</h2>

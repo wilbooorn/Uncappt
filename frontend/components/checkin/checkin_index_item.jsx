@@ -11,6 +11,9 @@ class CheckinIndexItem extends React.Component{
 
   handleDelete(e){
     e.preventDefault();
+    this.props.deleteCheckin(this.props.checkin.id).then(() =>{
+      this.props.history.push("/home");
+    });
   }
 
   calculateRating(rating){
@@ -72,7 +75,7 @@ class CheckinIndexItem extends React.Component{
       let editUrl = `/checkins/${this.props.checkin.id}/edit`;
       viewEditCheckin = <div className="edit-delete-checkin">
         <Link className="edit-checkin" to={editUrl}>Edit Checkin</Link>
-        <h4 onClick={this.handleDelete} className="dcheckin-elete">Delete Delete</h4>
+        <h4 onClick={this.handleDelete} className="dcheckin-elete">Delete Checkin</h4>
       </div>;
     }
 

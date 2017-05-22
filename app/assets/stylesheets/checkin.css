@@ -123,6 +123,15 @@
   margin: 50px auto;
 }
 
+.checkin-show-box > a {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.checkin-show-box > a:hover {
+  color: black;
+}
+
 .checkin-show-container-box {
   height: 100%;
   display: flex;

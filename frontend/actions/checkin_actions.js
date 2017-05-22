@@ -1,5 +1,7 @@
 export const RECEIVE_ALL_CHECKINS = "RECEIVE_ALL_CHECKINS";
 export const RECEIVE_ONE_CHECKIN = "RECEIVE_ONE_CHECKIN";
+export const CREATE_CHECKIN = "CREATE_CHECKIN";
+export const DELETE_CHECKIN = "DELETE_CHECKIN";
 import * as APIUtil from '../util/checkin_util';
 
 export const receiveAllCheckins = checkins =>({
@@ -12,6 +14,15 @@ export const receiveOneCheckin = checkin => ({
   checkin
 });
 
+export const sendOneCheckin = checkin => ({
+  type: CREATE_CHECKIN,
+  checkin
+});
+export const deleteOneCheckin = checkin => ({
+  type: DELETE_CHECKIN,
+  checkin
+});
+
 export const fetchAllCheckins = () => dispatch => {
   return APIUtil.fetchAllCheckins()
     .then(checkins => dispatch(receiveAllCheckins(checkins)));
@@ -20,4 +31,14 @@ export const fetchAllCheckins = () => dispatch => {
 export const fetchOneCheckin = (checkinId) => dispatch => {
   return APIUtil.fetchOneCheckin(checkinId)
     .then(checkin => dispatch(receiveOneCheckin(checkin)));
+};
+
+export const createNewCheckin = checkin => dispatch => {
+  return APIUtil.createNewCheckin(checkin)
+    .then(newCheckin => dispatch(sendOneCheckin(newCheckin)));
+};
+
+export const deleteCheckin = checkinId => dispatch => {
+  return APIUtil.deleteCheckin(checkinId)
+    .then(checkin => dispatch(deleteOneCheckin(checkin)));
 };

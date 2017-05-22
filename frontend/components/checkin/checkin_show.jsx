@@ -2,6 +2,7 @@ import React from 'react';
 import CheckinIndexItemContainer from './checkin_index_item_container';
 import NavBarContainer from '../nav_bar_container';
 import Footer from '../footer';
+import {Link} from 'react-router-dom';
 
 class CheckinShow extends React.Component {
   constructor(props){
@@ -20,6 +21,7 @@ class CheckinShow extends React.Component {
           <NavBarContainer history={this.props.history} />
           <div className="checkin-show-box">
             <CheckinIndexItemContainer path="show" checkin={this.props.checkin} history={this.props.history}/>
+            <Link to="/home">Back to All Checkins</Link>
           </div>
           <Footer />
         </div>
