@@ -16,7 +16,7 @@ class CheckinShow extends React.Component {
     console.log(this.props.checkin);
     if(this.props.checkin.id){
       return (
-        <div>
+        <div className="checkin-show-container-box">
           <NavBarContainer history={this.props.history} />
           <div className="checkin-show-box">
             <CheckinIndexItemContainer path="show" checkin={this.props.checkin} history={this.props.history}/>

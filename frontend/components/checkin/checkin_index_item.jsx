@@ -6,6 +6,11 @@ class CheckinIndexItem extends React.Component{
     super(props);
 
     this.calculateRating = this.calculateRating.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
+  }
+
+  handleDelete(e){
+    e.preventDefault();
   }
 
   calculateRating(rating){
@@ -56,10 +61,19 @@ class CheckinIndexItem extends React.Component{
   }
 
   render(){
-    let viewCheckin = <div></div>;
+    let viewEditCheckin = <div></div>;
     if (!this.props.path){
       let viewUrl = `/checkins/${this.props.checkin.id}`;
-      viewCheckin = <Link className="view-checkin" to={viewUrl}>View Checkin</Link>;
+      viewEditCheckin = <div>
+        <Link className="view-checkin" to={viewUrl}>View Checkin</Link>
+        </div>;
+    }
+    else if(this.props.currentUser.id === this.props.checkin.user.id){
+      let editUrl = `/checkins/${this.props.checkin.id}/edit`;
+      viewEditCheckin = <div className="edit-delete-checkin">
+        <Link className="edit-checkin" to={editUrl}>Edit Checkin</Link>
+        <h4 onClick={this.handleDelete} className="dcheckin-elete">Delete Delete</h4>
+      </div>;
     }
 
     let beerUrl = `/beers/${this.props.checkin.beer.id}`;
@@ -94,7 +108,7 @@ class CheckinIndexItem extends React.Component{
           </div>
 
         </div>
-        {viewCheckin}
+        {viewEditCheckin}
       </li>
     );
   }

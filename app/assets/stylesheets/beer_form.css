@@ -53,6 +53,7 @@
   margin: 0 15px 5px 0;
   font-size: 18px;
   text-indent: 10px;
+  width: 40%;
 }
 
 .new-beer-info {
@@ -73,6 +74,8 @@
   align-items: center;
   align-content: center;
   justify-content: center;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .new-beer-buttons {

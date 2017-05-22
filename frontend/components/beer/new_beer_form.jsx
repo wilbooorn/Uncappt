@@ -19,7 +19,7 @@ class NewBeerForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidMount(){
+  componentWillMount(){
     if(this.props.match.params.beerId){
       this.props.requestOneBeer(this.props.match.params.beerId);
       this.text = "Update Beer";
@@ -64,12 +64,14 @@ class NewBeerForm extends React.Component {
     }
     else if(this.state.image_url === ""){
         this.setState({image_url: "https://res.cloudinary.com/dslok1mwv/image/upload/v1495061245/bkwvbdxkybjgwtw0zplp.png"}, ()=> {
-          this.props.createNewBeer(this.state);
-          this.props.history.push("/beers");
+          this.props.createNewBeer(this.state).then( () => {
+            this.props.history.push("/beers");
+          });
         });
     }else{
-      this.props.createNewBeer(this.state);
-      this.props.history.push("/beers");
+      this.props.createNewBeer(this.state).then(() => {
+        this.props.history.push("/beers");
+      });
     }
   }
 

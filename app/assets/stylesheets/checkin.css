@@ -122,3 +122,24 @@
   width: 50%;
   margin: 50px auto;
 }
+
+.checkin-show-container-box {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.edit-delete-checkin {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.edit-delete-checkin > a {
+  margin-right: 10px;
+}
+
+.edit-delete-checkin > h4 {
+  cursor: pointer;
+}
