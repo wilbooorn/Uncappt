@@ -1,11 +1,13 @@
 import React from 'react';
 import UploadButton from '../upload_button';
+import Rating from 'react-rating';
 
 class NewCheckinModal extends React.Component {
   constructor(props){
     super(props);
     this.state={review:"", rating:"", location:"", image_url: "",
     beer_id:this.props.match.params.beerId, user_id:this.props.currentUser.id};
+    this.placeholder = 0;
 
     this.review = this.review.bind(this);
     this.location = this.location.bind(this);
@@ -74,9 +76,8 @@ class NewCheckinModal extends React.Component {
     this.setState({location});
   }
 
-  rating(e){
-    e.preventDefault();
-    let rating = document.getElementById("checkin-rating").value;
+  rating(rating){
+    this.placeholder = rating;
     this.setState({rating});
   }
 
@@ -93,7 +94,6 @@ class NewCheckinModal extends React.Component {
   }
 
   render(){
-    console.log(this.props.path);
     let image = <div></div>;
     if (this.state.image_url !== ""){
       image = <img className="new-checkin-image" src={this.state.image_url} />;
@@ -104,6 +104,7 @@ class NewCheckinModal extends React.Component {
       text = `Checkin for ${this.props.beer.name}.`;
     }
     return (
+
       <div className="new-checkin-container">
         <form className="checkin-form">
           <h1 className="new-checkin-title">UNCAPP'T</h1>
@@ -114,15 +115,11 @@ class NewCheckinModal extends React.Component {
             placeholder=" What did you think?" />
 
           <h2 className="checkin-rating-title">Rating</h2>
-          <select id="checkin-rating" value={this.state.rating}
-            onChange={this.rating}>
-              <option selected disabled>Please Select</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
+          <Rating initialRate={this.placeholder} id="checkin-rating"
+            empty={<img src="http://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png" className="black-beer"/>}
+            full={<img src="http://res.cloudinary.com/dslok1mwv/image/upload/v1495123297/udsqkscggkcla3h2aqhf.png" className="gold-beer"/>}
+            onChange={(rate) => this.rating(rate)}
+          />
 
           <input type="text" id="checkin-location"
             value={this.state.location} onChange={this.location}
