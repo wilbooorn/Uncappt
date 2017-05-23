@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import Rating from 'react-rating';
 
 class CheckinIndexItem extends React.Component{
   constructor(props){
@@ -15,53 +16,6 @@ class CheckinIndexItem extends React.Component{
       this.props.deleteCheckin(this.props.checkin.id).then(() =>{
         this.props.history.push("/home");
       });
-    }
-  }
-
-  calculateRating(rating){
-    if(rating === 1){
-      return <div className = 'checkin-rating'>
-        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
-        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
-        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
-        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
-      </div>;
-    }else if (rating === 2){
-      return <div className = 'checkin-rating'>
-        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
-        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
-        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
-      </div>;
-    }
-    else if (rating === 3){
-      return <div className = 'checkin-rating'>
-        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
-        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
-      </div>;
-    }
-    else if (rating === 4){
-      return <div className = 'checkin-rating'>
-        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png"/>
-      </div>;
-    }
-    else{
-      return <div className = 'checkin-rating'>
-        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-        <img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495081955/a9qv6gnvuj4frwa4gahv.png"/>
-      </div>;
     }
   }
 
@@ -103,7 +57,10 @@ class CheckinIndexItem extends React.Component{
 
             <div className="checkin-review">
               <p>{this.props.checkin.review}</p>
-              {this.calculateRating(this.props.checkin.rating)}
+                <Rating initialRate={this.props.checkin.rating} className="checkin-rating" readonly
+                  empty={<img src="http://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png" className="black-beer-show"/>}
+                  full={<img src="http://res.cloudinary.com/dslok1mwv/image/upload/v1495123297/udsqkscggkcla3h2aqhf.png" className="gold-beer-show"/>}
+                />
             </div>
 
             <div className='checkin-img-container'>

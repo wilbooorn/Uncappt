@@ -85,13 +85,6 @@
   max-height: 100%;
 }
 
-
-.checkin-rating > img {
-  width: 15px;
-  height: 40px;
-  margin-right: 2px;
-}
-
 .checkin-img {
   width: 50%;
   height: auto;
@@ -152,4 +145,10 @@
 
 .edit-delete-checkin > h4 {
   cursor: pointer;
+}
+
+.black-beer-show, .gold-beer-show {
+  width: 15px;
+  height: 40px;
+  margin-right: 2px;
 }
