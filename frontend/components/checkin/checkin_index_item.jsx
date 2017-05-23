@@ -80,7 +80,6 @@ class CheckinIndexItem extends React.Component{
         <h4 onClick={this.handleDelete} className="checkin-delete">Delete Checkin</h4>
       </div>;
     }
-
     let beerUrl = `/beers/${this.props.checkin.beer.id}`;
     return(
       <li className = "checkin-show-container">

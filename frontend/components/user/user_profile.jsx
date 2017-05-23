@@ -1,20 +1,32 @@
 import React from 'react';
 import NavBarContainer from '../nav_bar_container';
 import Footer from '../footer';
+import CheckinIndexContainer from '../checkin/checkin_index_container';
 
 class UserProfile extends React.Component {
   constructor(props){
     super(props);
   }
 
+  componentWillMount(){
+    this.props.fetchOneUser(this.props.match.params.userId);
+  }
+
   render(){
-    return (
-      <div>
-        <NavBarContainer history={this.props.history} />
-        <h1>Profile Page</h1>
-        <Footer />
-      </div>
-    );
+    if(this.props.user.id){
+      return (
+        <div>
+          <NavBarContainer history={this.props.history} />
+          <CheckinIndexContainer beerCheckins={this.props.user.checkins} history={this.props.history} />
+          <Footer />
+        </div>
+      );
+    }
+    else{
+      return (
+        <div></div>
+      );
+    }
   }
 
 }
