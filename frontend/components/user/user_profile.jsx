@@ -22,7 +22,9 @@ class UserProfile extends React.Component {
         <div>
           <NavBarContainer history={this.props.history} />
           <div className="user-profile-container">
-            <img src={this.props.user.image_url} />
+            <div className="user-profile-image">
+              <img src={this.props.user.image_url} />
+            </div>
           </div>
           <CheckinIndexContainer beerCheckins={this.props.user.checkins} history={this.props.history} />
           <Footer />

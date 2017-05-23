@@ -1,4 +1,24 @@
 .user-profile-container {
   width: 60%;
+  background-image: url("http://res.cloudinary.com/dslok1mwv/image/upload/c_scale,w_888/v1495565793/Beer-HD-Background_wwirfm.jpg");
+  margin: 20px auto;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+}
+
+.user-profile-image {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.user-profile-image > img {
+  margin: 10px;
+  width: 200px;
+  height: auto;
+  border-radius: 40%;
   border: 2px solid black;
 }
