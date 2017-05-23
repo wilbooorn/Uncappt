@@ -9,6 +9,7 @@ import BeerShowContainer from './components/beer/beer_show_container';
 import NewBeerFormContainer from './components/beer/new_beer_form_container';
 import CheckinShowContainer from './components/checkin/checkin_show_container';
 import NewCheckinModalContainer from './components/checkin/new_checkin_modal_container';
+import UserProfileContainer from './components/user/user_profile_container';
 import Home from './components/home';
 
 const App = () => (
@@ -24,6 +25,7 @@ const App = () => (
       <ProtectedRoute exact path="/checkins/:checkinId" component={CheckinShowContainer} />
       <ProtectedRoute exact path="/checkins/:beerId/new" component={NewCheckinModalContainer} />
       <ProtectedRoute exact path="/checkins/:checkinId/edit" component={NewCheckinModalContainer} />
+      <ProtectedRoute exact path="/users/:userId" component={UserProfileContainer} />
       <AuthRoute exact path="/" component={Splash}/>
     </Switch>
   </div>

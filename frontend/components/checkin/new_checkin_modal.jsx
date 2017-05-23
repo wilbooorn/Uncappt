@@ -42,7 +42,7 @@ class NewCheckinModal extends React.Component {
 
   handleCancel(e){
     e.preventDefault();
-    this.props.history.push("/beers");
+    this.props.history.goBack();
   }
 
   handleSubmit(e){
@@ -93,7 +93,7 @@ class NewCheckinModal extends React.Component {
   }
 
   render(){
-    console.log(this.props.errors);
+    console.log(this.props.path);
     let image = <div></div>;
     if (this.state.image_url !== ""){
       image = <img className="new-checkin-image" src={this.state.image_url} />;

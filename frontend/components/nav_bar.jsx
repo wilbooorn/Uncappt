@@ -9,6 +9,7 @@ class NavBar extends React.Component {
     this.toggleHidden = this.toggleHidden.bind(this);
     this.handleExplore = this.handleExplore.bind(this);
     this.handleLogo = this.handleLogo.bind(this);
+    this.handleProfile = this.handleProfile.bind(this);
   }
 
   toggleHidden(){
@@ -37,6 +38,12 @@ class NavBar extends React.Component {
     this.props.history.push('/home');
   }
 
+  handleProfile(e){
+    e.preventDefault();
+    let url = `/users/${this.props.currentUser.id}`;
+    this.props.history.push(url);
+  }
+
   render(){
     let imageUrl;
     if(this.props.currentUser.image_url) {
@@ -61,7 +68,8 @@ class NavBar extends React.Component {
             src={imageUrl}></img>
 
           <ul className="hidden" id="nav-menu">
-            <li className="nav-view-profile">View Profile</li>
+            <li  onClick={this.handleProfile}
+              className="nav-view-profile">View Profile</li>
             <li onClick = {this.handleSignOut}
               className="nav-signout">Sign Out</li>
           </ul>
