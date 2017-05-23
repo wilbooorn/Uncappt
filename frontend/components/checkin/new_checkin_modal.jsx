@@ -42,7 +42,7 @@ class NewCheckinModal extends React.Component {
 
   handleCancel(e){
     e.preventDefault();
-    this.props.history.push("/home");
+    this.props.history.push("/beers");
   }
 
   handleSubmit(e){
