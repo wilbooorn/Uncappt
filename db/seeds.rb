@@ -89,7 +89,7 @@ checkin6 = Checkin.create(user_id: user1.id, beer_id: beer9.id, rating: 3,
                           review: "Beauty is in the eye of the beer holder", location: "Paris")
 
 checkin7 = Checkin.create(user_id: user5.id, beer_id: beer7.id, rating: 5,
-                          review: "This beer is legen... wait for it... and I hope you're not loactose intolerant because the second half of that word is DAIRY", location: "Robots vs. Wrestlers",
+                          review: "This beer is legen... wait for it... and I hope you're not lactose intolerant because the second half of that word is DAIRY", location: "Robots vs. Wrestlers",
                           image_url:"http://res.cloudinary.com/dslok1mwv/image/upload/v1495497117/barney-beer_zondws.jpg")
 
 checkin8 = Checkin.create(user_id: user6.id, beer_id: beer10.id, rating: 5,
