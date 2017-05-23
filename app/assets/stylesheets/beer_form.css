@@ -20,7 +20,7 @@
 }
 
 .new-beer-title {
-  font-family: sans-serif;
+  font-family: 'Nobile', sans-serif;;
   font-size: 38px;
   color: #FFBE00;
   margin: 0 auto;
@@ -28,7 +28,7 @@
   margin-bottom: 5px;
 }
 .new-beer-message {
-  font-family: sans-serif;
+  font-family: 'Nobile', sans-serif;;
   font-size: 24px;
   color: #FFBE00;
   margin: 0 auto;
@@ -89,7 +89,7 @@
   font-weight: bold;
   color: white;
   font-size: 18px;
-  font-family: sans-serif;
+  font-family: 'Nobile', sans-serif;;
   width: 80%;
   height: 50px;
   background-color: #FFBE00;
