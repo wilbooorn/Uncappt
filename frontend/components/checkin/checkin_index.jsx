@@ -13,7 +13,7 @@ class CheckinIndex extends React.Component {
 
   render(){
     let checkins;
-    if (this.props.beerCheckins[0]){
+    if (this.props.beerCheckins){
       console.log(this.props.beerCheckins);
       checkins = this.props.beerCheckins.map((checkin, idx) =>(
         <CheckinIndexItemContainer history={this.props.history} key={idx} checkin={checkin} />

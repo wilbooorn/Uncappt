@@ -12,11 +12,18 @@ class UserProfile extends React.Component {
     this.props.fetchOneUser(this.props.match.params.userId);
   }
 
+  componentDidMount(){
+    window.scrollTo(0,0);
+  }
+
   render(){
     if(this.props.user.id){
       return (
         <div>
           <NavBarContainer history={this.props.history} />
+          <div className="user-profile-container">
+            <img src={this.props.user.image_url} />
+          </div>
           <CheckinIndexContainer beerCheckins={this.props.user.checkins} history={this.props.history} />
           <Footer />
         </div>

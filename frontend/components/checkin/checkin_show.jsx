@@ -10,6 +10,7 @@ class CheckinShow extends React.Component {
   }
 
   componentDidMount(){
+    window.scrollTo(0,0);
     this.props.fetchOneCheckin(this.props.match.params.checkinId);
   }
 

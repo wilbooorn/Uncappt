@@ -81,6 +81,7 @@ class CheckinIndexItem extends React.Component{
       </div>;
     }
     let beerUrl = `/beers/${this.props.checkin.beer.id}`;
+    let userUrl = `/users/${this.props.checkin.user.id}`;
     return(
       <li className = "checkin-show-container">
         <div className = 'checkin-pic-info'>
@@ -91,7 +92,7 @@ class CheckinIndexItem extends React.Component{
           <div className="checkin-info-review">
 
             <div className='checkin-info'>
-              <p>{this.props.checkin.user.username}</p>
+              <Link to={userUrl}>{this.props.checkin.user.username}</Link>
               <p>is drinking a </p>
               <Link to={beerUrl}>{this.props.checkin.beer.name}</Link>
               <p> by </p>

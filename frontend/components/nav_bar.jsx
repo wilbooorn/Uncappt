@@ -12,6 +12,10 @@ class NavBar extends React.Component {
     this.handleProfile = this.handleProfile.bind(this);
   }
 
+  // componentDidMount(){
+  //   document.getElementById("nav-menu").classList.add("hidden");
+  // }
+
   toggleHidden(){
     document.getElementById("nav-menu").classList.toggle("hidden");
     document.removeEventListener("click", this.toggleHidden);
@@ -30,16 +34,23 @@ class NavBar extends React.Component {
 
   handleExplore(e){
     e.preventDefault();
+    if(!document.getElementById("nav-menu").classList.contains("hidden")){
+      this.toggleHidden();
+    }
     this.props.history.push("/beers");
   }
 
   handleLogo(e){
     e.preventDefault();
+    if(!document.getElementById("nav-menu").classList.contains("hidden")){
+      this.toggleHidden();
+    }
     this.props.history.push('/home');
   }
 
   handleProfile(e){
     e.preventDefault();
+    this.toggleHidden();
     let url = `/users/${this.props.currentUser.id}`;
     this.props.history.push(url);
   }
@@ -47,7 +58,6 @@ class NavBar extends React.Component {
   render(){
     let imageUrl;
     if(this.props.currentUser.image_url) {
-      console.log(this.props.currentUser.image_url);
       imageUrl = this.props.currentUser.image_url;
     } else {
       imageUrl = "https://res.cloudinary.com/dslok1mwv/image/upload/v1494966538/stock_pic_yucizf.png";
