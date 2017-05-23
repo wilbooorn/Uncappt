@@ -20,7 +20,7 @@ class BeersIndex extends React.Component {
         <BeerIndexItem history={this.props.history} key={idx} beer={beer} />
       ));
       return (
-        <div>
+        <div className="beers-index-container">
           <NavBarContainer history={this.props.history}/>
           <ul className="all-beers">
             <div className="all-the-beers">

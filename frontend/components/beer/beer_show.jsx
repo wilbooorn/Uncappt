@@ -48,8 +48,8 @@ class BeerShow extends React.Component {
             <div className="back-to-beers">
               <Link className='back-to-beers-link' to="/beers/">Back to All Beers</Link>
             </div>
-            <Footer />
           </div>
+          <Footer />
         </div>
       );
     }
