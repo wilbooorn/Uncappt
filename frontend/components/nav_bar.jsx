@@ -4,12 +4,16 @@ class NavBar extends React.Component {
   constructor(props){
     super(props);
 
+    this.state={ search: "" };
+
     this.handlePicClick = this.handlePicClick.bind(this);
     this.handleSignOut = this.handleSignOut.bind(this);
     this.toggleHidden = this.toggleHidden.bind(this);
     this.handleExplore = this.handleExplore.bind(this);
     this.handleLogo = this.handleLogo.bind(this);
     this.handleProfile = this.handleProfile.bind(this);
+    this.change = this.change.bind(this);
+    this.glass = this.glass.bind(this);
   }
 
 
@@ -52,7 +56,27 @@ class NavBar extends React.Component {
     this.props.history.push(url);
   }
 
+  change(){
+    let search = document.getElementById("beer-search").value;
+    this.props.searchBeer(search);
+    this.setState({ search });
+  }
+
+  glass(e){
+    e.preventDefault();
+    document.getElementById("beer-search").classList.toggle("no-show-nav");
+  }
+
   render(){
+    let search = <div></div>;
+    if(this.props.page){
+
+      search = <div className="search-container">
+        <i onClick={this.glass} className="fa fa-search"></i>
+        <input type="text" id="beer-search" value={this.state.search}
+        placeholder="search beers" onChange={this.change} className="no-show-nav"/>
+    </div>
+    }
     let imageUrl;
     if(this.props.currentUser.image_url) {
       imageUrl = this.props.currentUser.image_url;
@@ -68,6 +92,8 @@ class NavBar extends React.Component {
         </div>
 
         <div className="right-side-nav">
+
+          {search}
           <h3 className="nav-explore"
             onClick={this.handleExplore}>Explore Beers
           </h3>

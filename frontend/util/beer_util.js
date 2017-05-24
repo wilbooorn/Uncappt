@@ -34,3 +34,10 @@ export const updateBeer = beer => (
     data: {beer}
   })
 );
+
+export const searchBeer = search => (
+  $.ajax({
+    method: "GET",
+    url: `/api/beers/?search=${search}`
+  })
+);

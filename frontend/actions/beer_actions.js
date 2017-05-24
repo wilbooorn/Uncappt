@@ -68,3 +68,8 @@ export const updateBeer = (beer) => dispatch => {
     },
     error => dispatch(receiveBeerErrors(error.responseJSON)));
 };
+
+export const searchBeer = search => dispatch => {
+  return APIUtil.searchBeer(search)
+    .then(beer => dispatch(receiveAllBeer(beer)));
+};

@@ -13,6 +13,10 @@ class BeersIndex extends React.Component {
     this.props.requestAllBeer();
   }
 
+  componentWillReceiveProps(nextProps){
+    console.log(nextProps);
+  }
+
   render(){
     let beers;
     if (this.props.beers[0]){
@@ -21,7 +25,7 @@ class BeersIndex extends React.Component {
       ));
       return (
         <div className="beers-index-container">
-          <NavBarContainer history={this.props.history}/>
+          <NavBarContainer page="index" history={this.props.history}/>
           <ul className="all-beers">
             <div className="all-the-beers">
               <h1>All Beers</h1>

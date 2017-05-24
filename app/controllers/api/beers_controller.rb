@@ -18,7 +18,11 @@ class Api::BeersController < ApplicationController
   end
 
   def index
-    @beers = Beer.all
+    if params.include?(:search) && params[:search] != ""
+      @beers = Beer.includes(:checkins).search_by_name(params[:search])
+    else
+      @beers = Beer.includes(:checkins).all
+    end
   end
 
   def edit
