@@ -62,6 +62,7 @@ class NavBar extends React.Component {
     } else {
       imageUrl = "https://res.cloudinary.com/dslok1mwv/image/upload/v1494966538/stock_pic_yucizf.png";
     }
+    console.log(this.props);
     return (
       <header className="main-nav">
         <div className="left-side-nav"

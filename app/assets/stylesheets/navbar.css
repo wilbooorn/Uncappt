@@ -46,7 +46,7 @@
 }
 
 .nav-explore:hover, .left-side-nav:hover {
-  text-shadow: 2px 2px black;
+  text-shadow: 1px 1px black;
 }
 
 .nav-profile {

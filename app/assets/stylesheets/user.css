@@ -7,18 +7,20 @@
   flex-direction: column;
   justify-content: flex-end;
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
-  min-width: 500px;
+  min-width: 573px;
 }
 
 .user-profile-image {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  align-content: center;
 }
 
 .user-profile-image > img {
-  margin: 10px;
-  width: 175px;
-  height: auto;
+  margin: 0 10px 10px 10px;
+  width: auto;
+  height: 150px;
   border-radius: 40%;
   border: 4px solid white;
   margin-right: 20px;
@@ -29,13 +31,13 @@
   flex-direction: row;
   align-items: center;
   align-content: center;
-  height: 50%;
+  height: 65%;
 }
 
 .user-info {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 100%;
 }
 
@@ -43,8 +45,8 @@
   font-size: 28px;
   font-weight: bolder;
   color: white;
-  margin: 30px 0;
-
+  margin: 40px 0;
+  text-shadow: 1px 1px black;
 }
 
 .user-stats {
@@ -55,9 +57,28 @@
   color: white;
   font-size: 18px;
   font-weight: bold;
-
+  font-size: 14px;
 }
 
-.user-stats > h3 {
+.checkin-count {
+  display: flex;
+  flex-direction: row;
   margin-right: 10px;
+  border-right: 1px solid white;
+}
+
+.checkin-count > h3 {
+  margin-right: 10px;
+}
+
+.where-you-drinking {
+  display: flex;
+}
+
+.where-you-drinking > p {
+  margin-right: 5px;
+}
+
+.profile-upload-button {
+  background-color: black;
 }

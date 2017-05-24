@@ -6,7 +6,6 @@ class CheckinIndexItem extends React.Component{
   constructor(props){
     super(props);
 
-    this.calculateRating = this.calculateRating.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
   }
 
