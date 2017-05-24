@@ -13,10 +13,6 @@ class BeersIndex extends React.Component {
     this.props.requestAllBeer();
   }
 
-  componentWillReceiveProps(nextProps){
-    console.log(nextProps);
-  }
-
   render(){
     let beers;
     if (this.props.beers[0]){

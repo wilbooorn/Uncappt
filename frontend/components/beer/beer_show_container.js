@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import BeerShow from './beer_show';
-import {requestOneBeer, deleteBeer} from '../../actions/beer_actions';
+import {requestOneBeer, deleteBeer, clearBeer} from '../../actions/beer_actions';
 import {selectAllCheckins, selectBeerCheckins} from '../../reducers/selectors';
 
 const mapStateToProps = state => ({
@@ -10,6 +10,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   requestOneBeer: (beerId) => dispatch(requestOneBeer(beerId)),
   deleteBeer: (beerId) => dispatch(deleteBeer(beerId)),
+  clearBeer: () => dispatch(clearBeer())
 });
 
 

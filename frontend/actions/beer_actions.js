@@ -4,6 +4,7 @@ export const CREATE_NEW_BEER = "CREATE_NEW_BEER";
 export const RECEIVE_BEER_ERRORS = "RECEIVE_BEER_ERRORS";
 export const REMOVE_BEER = "REMOVE_BEER";
 export const UPDATE_BEER = "UPDATE_BEER";
+export const CLEAR_BEER = "CLEAR_BEER";
 
 import * as APIUtil from '../util/beer_util';
 
@@ -36,6 +37,10 @@ export const receiveBeerErrors = errors => ({
 export const updateOneBeer = beer => ({
   type: UPDATE_BEER,
   beer
+});
+
+export const clearBeer = () => ({
+  type: CLEAR_BEER
 });
 
 export const requestAllBeer = () => dispatch => {

@@ -26,6 +26,10 @@ class BeerShow extends React.Component {
     }, 2000);
   }
 
+  componentWillUnmount(){
+    this.props.clearBeer();
+  }
+
   render(){
     if(this.props.beer.name){
       return (

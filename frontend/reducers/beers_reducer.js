@@ -1,5 +1,5 @@
 import { RECEIVE_ALL_BEER, RECEIVE_ONE_BEER, REMOVE_BEER, UPDATE_BEER,
-CREATE_NEW_BEER, RECEIVE_BEER_ERRORS } from '../actions/beer_actions';
+CREATE_NEW_BEER, RECEIVE_BEER_ERRORS, CLEAR_BEER } from '../actions/beer_actions';
 import merge from 'lodash/merge';
 
 const defaultState = {
@@ -39,9 +39,12 @@ const BeersReducer = (state = defaultState, action) => {
       delete newState.beers[action.beer.id];
       return newState;
 
+    case CLEAR_BEER:
+      newState = merge({}, state);
+      newState.beers = {};
+      return newState;
+
     case RECEIVE_BEER_ERRORS:
-      console.log("AN ERROR HAPPENED");
-      console.log(action.errors);
       newState = merge({}, state);
       newState.errors = action.errors;
       return newState;
