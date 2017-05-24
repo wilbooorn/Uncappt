@@ -166,3 +166,36 @@ checkin16 = Checkin.create(user_id: user3.id, beer_id: beer6.id, rating: 5,
 checkin16 = Checkin.create(user_id: user7.id, beer_id: beer9.id, rating: 5,
                           review: "AWWWW MANNNNNN", location: "an awesome place",
                           image_url: "https://res.cloudinary.com/dslok1mwv/image/upload/v1495497377/05d03e9b9e8815f2ede51721ac774d61_rmryeu.jpg")
+
+checkin17 = Checkin.create(user_id: user1.id, beer_id: beer13.id, rating: 4,
+                          review: "It's 5 o'clock somewhere")
+
+checkin18 = Checkin.create(user_id: user1.id, beer_id: beer14.id, rating: 5,
+                          review: "Scientists report that drinking beer can be good for the liver. I’m sorry, did I say ‘scientists’? I meant me.")
+
+checkin19 = Checkin.create(user_id: user7.id, beer_id: beer15.id, rating: 5,
+                          review: "My friends went on a tour of this beer's brewery. But i missed it...", location: "home by myself",
+                          image_url: "https://res.cloudinary.com/dslok1mwv/image/upload/v1495497377/05d03e9b9e8815f2ede51721ac774d61_rmryeu.jpg")
+
+checkin20 = Checkin.create(user_id: user6.id, beer_id: beer16.id, rating: 3,
+                          review: "The kids don't know I drink in the class while they're at lunch. Shhhh...", location: "my kindergarten class",
+                          image_url: "https://res.cloudinary.com/dslok1mwv/image/upload/v1495497293/lilmarsh_ekhd6j.jpg")
+
+checkin21 = Checkin.create(user_id: user5.id, beer_id: beer17.id, rating: 3,
+                          review: "I spilled some of this beer on my suit so now I hate it.", location: "the strip club",
+                          image_url: "https://res.cloudinary.com/dslok1mwv/image/upload/v1495497117/barney-beer_zondws.jpg")
+
+checkin22 = Checkin.create(user_id: user4.id, beer_id: beer18.id, rating: 4,
+                          review: "Pretty good.", location: "somewhere in Canada",
+                          image_url: "https://res.cloudinary.com/dslok1mwv/image/upload/v1495147054/robin_beer_dxgsg0.jpg")
+
+checkin23 = Checkin.create(user_id: user3.id, beer_id: beer19.id, rating: 5,
+                          review: "This isn't a beach house, it's a beach mansion. BOOM, lawyered.", location: "court",
+                          image_url: "https://res.cloudinary.com/dslok1mwv/image/upload/v1495146941/marshall_beer_txnuxq.jpg")
+
+checkin24 = Checkin.create(user_id: user2.id, beer_id: beer20.id, rating: 5,
+                          review: "I wish i brought my encylopædia so I could tell you more about this beer.", location: "the library",
+                          image_url: "https://res.cloudinary.com/dslok1mwv/image/upload/v1495147130/ted_beer_cszqj1.jpg")
+
+checkin24 = Checkin.create(user_id: user1.id, beer_id: beer21.id, rating: 5,
+                          review: "I’ve only ever been in love with a beer bottle and a mirror.")

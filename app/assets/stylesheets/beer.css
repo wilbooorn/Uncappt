@@ -16,6 +16,7 @@
 }
 
 .main-beer-show {
+  background-color: white;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -57,7 +58,7 @@
 }
 
 .beer-show{
-  background-color: white;
+
   display: flex;
   width: 50%;
   margin-bottom: 40px;
@@ -70,7 +71,7 @@
 
 .bottom-beer-show{
   display: flex;
-  margin: 0 0 30px 140px;
+  margin: 0 auto 30px auto;
   justify-content: space-between;
 }
 
@@ -190,8 +191,9 @@
 }
 
 .edit-delete{
+  margin: 0 0 0 100px;;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 

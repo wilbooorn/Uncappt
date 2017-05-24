@@ -19,8 +19,10 @@ class BeerIndexItem extends React.Component {
 
   handleDelete(e){
     e.preventDefault();
-    this.props.deleteBeer(this.props.beer.id);
-    this.props.history.push("/beers");
+    if (confirm("Are you sure you want to delete this beer?")){
+      this.props.deleteBeer(this.props.beer.id);
+      this.props.history.push("/beers");
+    }
   }
 
   handleTitleClick(e){

@@ -89,6 +89,7 @@
   width: 50%;
   height: auto;
   max-height: 300px;
+  object-fit: contain;
 }
 
 .checkin-img-container {

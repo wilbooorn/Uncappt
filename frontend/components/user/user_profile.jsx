@@ -25,6 +25,10 @@ class UserProfile extends React.Component {
     window.scrollTo(0,0);
   }
 
+  componentWillUnmount(){
+    this.props.clearUser();
+  }
+
   postImage(url){
     let img = {url};
     $.ajax({
