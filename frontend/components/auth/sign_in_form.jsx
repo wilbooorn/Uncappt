@@ -42,37 +42,35 @@ class SignInForm extends React.Component {
 
   render(){
     return (
-      <div className="sign-in-container">
-          <form className="sign-in-form">
-          <h1 className="sign-in-title">UNCAPP'T</h1>
-          <h3 className="errors">{this.props.errors}</h3>
+      <form className="sign-in-form">
+      <h1 className="sign-in-title">UNCAPP'T</h1>
+      <h3 className="errors">{this.props.errors}</h3>
 
-          <input type="text" id="signin-username"
-            value={this.state.username}
-            onChange={this.handleUsername}
-            placeholder="username">
-          </input>
+      <input type="text" id="signin-username"
+        value={this.state.username}
+        onChange={this.handleUsername}
+        placeholder="username">
+      </input>
 
-          <input type="password" id="signin-password"
-            value={this.state.password}
-            onChange={this.handlePassword}
-            placeholder="password">
-          </input>
+      <input type="password" id="signin-password"
+        value={this.state.password}
+        onChange={this.handlePassword}
+        placeholder="password">
+      </input>
 
-          <button onClick={this.handleSubmit}
-            className="sign-in-button">Sign In</button>
-          <p className="or">-- OR --</p>
-          <button onClick={this.handleGuest}
-            className="demo-button">Continue as a Guest</button>
+      <button onClick={this.handleSubmit}
+        className="sign-in-button">Sign In</button>
+      <p className="or">-- OR --</p>
+      <button onClick={this.handleGuest}
+        className="demo-button">Continue as a Guest</button>
 
-          <div className="member">
-            <p className="dif-member">Not a member?</p>
-            <Link className="link" to="/signup">Sign Up Here </Link>
-          </div>
-
-        </form>
-
+      <div className="member">
+        <p className="dif-member">Not a member?</p>
+        <a className="link" onClick={this.props.toggleForm}>Sign Up Here </a>
       </div>
+
+    </form>
+
     );
   }
 }

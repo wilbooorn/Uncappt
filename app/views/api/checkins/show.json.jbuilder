@@ -7,3 +7,4 @@ json.location @checkin.location
 json.image_url @checkin.image_url
 json.user @checkin.user
 json.beer @checkin.beer
+json.created_at @checkin.created_at

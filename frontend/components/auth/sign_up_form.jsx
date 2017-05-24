@@ -61,46 +61,44 @@ class SignUpForm extends React.Component {
       image = <img className="signup-image" src={this.state.image_url} />;
     }
     return (
-      <div className="sign-up-container">
-        <form className="sign-up-form">
-          <h1 className="sign-in-title">UNCAPP'T</h1>
-          <h3 className="errors">{this.props.errors}</h3>
+      <form className="sign-up-form">
+        <h1 className="sign-in-title">UNCAPP'T</h1>
+        <h3 className="errors">{this.props.errors}</h3>
 
-          <input type="text" id="signup-username"
-            value={this.state.username}
-            onChange={this.handleUsername}
-            placeholder="username">
-          </input>
+        <input type="text" id="signup-username"
+          value={this.state.username}
+          onChange={this.handleUsername}
+          placeholder="username">
+        </input>
 
-          <input type="password" id="signup-password"
-            value={this.state.password}
-            onChange={this.handlePassword}
-            placeholder="password">
-          </input>
+        <input type="password" id="signup-password"
+          value={this.state.password}
+          onChange={this.handlePassword}
+          placeholder="password">
+        </input>
 
-          <h3 className="location">Where are you drinking?</h3>
-          <input type="text" id="signup-location"
-            value={this.state.location}
-            placeholder="San Francisco, CA"
-            onChange={this.handleLocation}>
-          </input>
+        <h3 className="location">Where are you drinking?</h3>
+        <input type="text" id="signup-location"
+          value={this.state.location}
+          placeholder="San Francisco, CA"
+          onChange={this.handleLocation}>
+        </input>
 
-          <div className="signup-image-container">
-            <UploadButton postImage={this.postImage} text="Upload Profile Picture"/>
-            {image}
-          </div>
+        <div className="signup-image-container">
+          <UploadButton postImage={this.postImage} text="Upload Profile Picture"/>
+          {image}
+        </div>
 
-          <button onClick={this.handleSubmit}
-            className="signup-button">Sign Up</button>
+        <button onClick={this.handleSubmit}
+          className="signup-button">Sign Up</button>
 
-          <div className="member">
-            <p className="dif-member">Have an Account?</p>
-            <Link to="/signin">Sign In Here</Link>
-          </div>
+        <div className="member">
+          <p className="dif-member">Have an Account?</p>
+          <a className="link" onClick={this.props.toggleForm}>Sign In Here </a>
+        </div>
 
-        </form>
+      </form>
 
-      </div>
     );
   }
 }

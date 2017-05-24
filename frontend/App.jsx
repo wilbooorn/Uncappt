@@ -15,8 +15,6 @@ import Home from './components/home';
 const App = () => (
   <div>
     <Switch>
-      <AuthRoute exact path ="/signin" component={SignInFormContainer} />
-      <AuthRoute exact path ="/signup" component={SignUpFormContainer} />
       <ProtectedRoute exact path="/home" component={Home} />
       <ProtectedRoute exact path="/beers" component={BeersIndexContainer} />
       <ProtectedRoute exact path="/beers/new" component={NewBeerFormContainer} />

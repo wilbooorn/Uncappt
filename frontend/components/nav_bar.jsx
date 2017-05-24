@@ -75,7 +75,7 @@ class NavBar extends React.Component {
         <i onClick={this.glass} className="fa fa-search"></i>
         <input type="text" id="beer-search" value={this.state.search}
         placeholder="search beers" onChange={this.change} className="no-show-nav"/>
-    </div>
+    </div>;
     }
     let imageUrl;
     if(this.props.currentUser.image_url) {
