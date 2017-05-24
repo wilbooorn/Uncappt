@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import ReactTooltip from 'react-tooltip';
 
 class BeerIndexItem extends React.Component {
   constructor(props){
@@ -8,13 +9,6 @@ class BeerIndexItem extends React.Component {
     this.handleTitleClick = this.handleTitleClick.bind(this);
     this.handlePlus = this.handlePlus.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
-    this.toggleText = this.toggleText.bind(this);
-  }
-  componentWillMount(){
-  }
-
-  toggleText(){
-    document.getElementById('hidden-hover').classList.toggle("dont-show");
   }
 
   handleDelete(e){
@@ -63,10 +57,9 @@ class BeerIndexItem extends React.Component {
                   <p className="beer-brewery">{this.props.beer.brewery}</p>
                 </div>
                 <div className="beer-plus">
-                  <p onClick={this.handlePlus}
-                    onMouseEnter={this.toggleText} onMouseLeave={this.toggleText}
+                  <p onClick={this.handlePlus} data-tip="Checkin This Beer"
                     className="beer-plus-img">+</p>
-                  <p id="hidden-hover" className="dont-show">Checkin this beer</p>
+                  <ReactTooltip type="warning" place="top" />
                 </div>
               </div>
               <p className="beer-style">{this.props.beer.style}</p>
