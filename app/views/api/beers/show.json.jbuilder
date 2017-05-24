@@ -6,6 +6,7 @@ json.abv @beer.abv
 json.ibu @beer.ibu
 json.style @beer.style
 json.image_url @beer.image_url
+json.rating @beer.rating
 json.checkins(@beer.checkins) do |checkin|
   json.id checkin.id
   json.user_id checkin.user_id

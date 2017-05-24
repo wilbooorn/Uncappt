@@ -4,4 +4,14 @@ class Checkin < ApplicationRecord
                                   message: "not valid" }
   belongs_to :user
   belongs_to :beer
+
+  after_save :calculate_average!
+
+  def calculate_average!
+    num = self.beer.checkins.length
+    sum = 0.0
+    self.beer.checkins.each { |checkin| sum += checkin.rating }
+    self.beer.rating = (sum / num).round(2)
+    self.beer.save
+  end
 end

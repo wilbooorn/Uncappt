@@ -15,7 +15,6 @@ class CheckinShow extends React.Component {
   }
 
   render(){
-    console.log(this.props.checkin);
     if(this.props.checkin.id){
       return (
         <div className="checkin-show-container-box">

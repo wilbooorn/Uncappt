@@ -27,7 +27,6 @@ class BeerShow extends React.Component {
   }
 
   render(){
-
     if(this.props.beer.name){
       return (
         <div className="beer-show-container">

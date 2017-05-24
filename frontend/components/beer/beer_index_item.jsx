@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import ReactTooltip from 'react-tooltip';
+import Rating from 'react-rating';
 
 class BeerIndexItem extends React.Component {
   constructor(props){
@@ -41,6 +42,7 @@ class BeerIndexItem extends React.Component {
       </div>;
     }
     return (
+
       <li className="beer-show">
         <div className="main-beer-show">
           <div className="top-beer-show">
@@ -62,7 +64,14 @@ class BeerIndexItem extends React.Component {
                   <ReactTooltip type="warning" place="top" />
                 </div>
               </div>
-              <p className="beer-style">{this.props.beer.style}</p>
+              <div className = "style-and-rating">
+                <p className="beer-style">{this.props.beer.style}</p>
+                <Rating initialRate={this.props.beer.rating} id="checkin-rating"
+                  empty={<img src="http://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png" className="black-beer"/>}
+                  full={<img src="http://res.cloudinary.com/dslok1mwv/image/upload/v1495123297/udsqkscggkcla3h2aqhf.png" className="gold-beer"/>}
+                  readonly
+                />
+              </div>
               <p className="beer-description">{this.props.beer.description}</p>
             </div>
           </div>

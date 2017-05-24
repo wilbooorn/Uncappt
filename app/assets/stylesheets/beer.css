@@ -96,17 +96,6 @@
   position: relative;
 }
 
-#hidden-hover {
-  position: absolute;
-  top: 40px;
-  left: 40px;
-  background-color: white;
-  border: 1px solid black;
-  padding: 5px;
-  background-color: #FFBE00;
-  font-weight: bold;
-}
-
 .dont-show {
   display: none;
 }
@@ -223,4 +212,12 @@
 
 .back-to-beers-link:hover {
   color: black;
+}
+
+.style-and-rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
 }
