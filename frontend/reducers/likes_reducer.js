@@ -1,7 +1,11 @@
 import {CREATE_LIKE, DELETE_LIKE} from '../actions/like_actions';
 import merge from 'lodash/merge';
 
-const LikesReducer = (state, action) => {
+const initialState = {
+  likes: {}
+};
+
+const LikesReducer = (state = initialState, action) => {
   Object.freeze(state);
   let newState;
   switch(action.type){
