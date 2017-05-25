@@ -27,6 +27,6 @@ Authentication for Untapp'd is implemented both on the frontend and the backend.
 
 ## Beer Search
 
-By default, all beers are displayed on the beers index page.
+By default, all beers are displayed on the beers index page. The beers index page features a magnifying glass that, when clicked, reveals a search field. Using the PG Search gem, beers can be searched by either their name, or their brewery's name, and the beers index will update with records that match the search query. 
 
 ![Search GIF](http://res.cloudinary.com/dslok1mwv/image/upload/v1495732288/search_cf0qdv.gif)
