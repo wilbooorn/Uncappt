@@ -19,7 +19,7 @@ class Api::BeersController < ApplicationController
 
   def index
     if params.include?(:search) && params[:search] != ""
-      @beers = Beer.includes(:checkins).search_by_name(params[:search]).order(:name)
+      @beers = Beer.includes(:checkins).search_by_name(params[:search])
     else
       @beers = Beer.includes(:checkins).order(:name)
     end
