@@ -3,7 +3,6 @@ import React from 'react';
 class LikeButton extends React.Component {
   constructor(props){
     super(props);
-
     this.unlike = this.unlike.bind(this);
     this.like = this.like.bind(this);
     let usersWhoLike = this.props.checkin.user_likes.map(user => user.username);
@@ -27,12 +26,20 @@ class LikeButton extends React.Component {
   render(){
     if(this.state.liked){
       return <button className="liked-cheers-button"
-              onClick={this.unlike}>Uncheers <i className="fa fa-beer"></i></button>;
+              onClick={this.unlike}><img
+              className="cheers-pic"
+              src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495752343/23937-200_hnxjbf.png" />
+              Uncheers
+            </button>;
     }
     else{
       return(
         <button className="unliked-cheers-button"
-                onClick={this.like}>Cheers <i className="fa fa-beer"></i></button>
+                onClick={this.like}><img
+                className="cheers-pic"
+                src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495752343/23937-200_hnxjbf.png" />
+                Cheers
+              </button>
       );
     }
   }

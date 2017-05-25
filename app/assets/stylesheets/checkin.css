@@ -161,21 +161,3 @@
   align-items: center;
   align-content: center;
 }
-
-.unliked-cheers-button {
-  font-size: 18px;
-  font-weight: bold;
-  background-color: white;
-  margin: 10px;
-}
-
-.liked-cheers-button{
-  background-color: #FFBE00;
-  font-size: 18px;
-  font-weight: bold;
-  margin: 10px;
-}
-
-.liked-cheers-button:hover {
-  background-color: white;
-}
