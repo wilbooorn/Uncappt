@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     resources :beers
     resources :images, only: [:index, :create]
     resources :checkins
+    resources :likes, only: [:create, :destroy]
   end
 end
