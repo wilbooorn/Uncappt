@@ -37,5 +37,5 @@ By default, all beers are displayed on the beers index page. The beers index pag
 ### Comments
 Post and delete comments on other users' checkins.
 
-###Sorting
+### Sorting
 Sort beers by various criteria, such as highest rated, or most checkins, and sort checkins by most likes, or time created.
