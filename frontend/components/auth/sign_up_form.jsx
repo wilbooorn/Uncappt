@@ -63,7 +63,7 @@ class SignUpForm extends React.Component {
     return (
       <form className="sign-up-form">
         <h1 className="sign-in-title">UNCAPP'T</h1>
-        <h3 className="errors">{this.props.errors}</h3>
+        <h3 className="errors">{this.props.errors.join(", ")}</h3>
 
         <input type="text" id="signup-username"
           value={this.state.username}
