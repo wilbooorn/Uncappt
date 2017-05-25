@@ -29,7 +29,7 @@ class LikeButton extends React.Component {
               onClick={this.unlike}><img
               className="cheers-pic"
               src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495752343/23937-200_hnxjbf.png" />
-              Uncheers
+            uncheers
             </button>;
     }
     else{
@@ -38,7 +38,7 @@ class LikeButton extends React.Component {
                 onClick={this.like}><img
                 className="cheers-pic"
                 src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495752343/23937-200_hnxjbf.png" />
-                Cheers
+              cheers
               </button>
       );
     }
