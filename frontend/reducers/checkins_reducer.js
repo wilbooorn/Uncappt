@@ -41,7 +41,6 @@ const CheckinsReducer = (state = defaultState, action) => {
       return newState;
 
     case RECEIVE_CHECKIN_ERRORS:
-      debugger
       newState = merge({}, state);
       newState.errors = action.errors;
       return newState;

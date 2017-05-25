@@ -2,6 +2,8 @@ json.id @user.id
 json.username @user.username
 json.location @user.location
 json.image_url @user.image_url
+json.likes @user.likes
+json.checkin_likes @user.checkin_likes
 json.checkins(@user.checkins) do |checkin|
   json.id checkin.id
   json.user_id checkin.user_id
