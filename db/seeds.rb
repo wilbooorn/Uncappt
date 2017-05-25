@@ -66,39 +66,39 @@ beer12 = Beer.create(name: "Pliny the Elder", description: "Pliny the Elder is b
 
 beer13 = Beer.create(name: "Union Jack", description: "Double dry‐hopped to create bold grapefruit, tangerine and citrus ﬂavors, all contrasted by pale malt sweetness to rein in the intensity. The result is a tribute to—and a twist on—the IPA style that put the West Coast on the craft beer map.",
                      brewery: "Firestone Walker", abv: 7, ibu: 70, style: "West Coast IPA",
-                     image_url: "http://res.cloudinary.com/dslok1mwv/image/upload/v1495584948/union_jack_cnjney.jpg")
+                     image_url: "https://res.cloudinary.com/dslok1mwv/image/upload/v1495584948/union_jack_cnjney.jpg")
 
 beer14 = Beer.create(name: "Blue Moon Belgian White", description: "The flavor starts crisp and tangy and ends with a coriander and orange spiciness. The Valencia orange peel gives a subtle sweetness to the beer.",
                     brewery: "Blue Moon Brewing Company", abv: 5.4, ibu: 9, style: "Wheat",
-                    image_url: "http://res.cloudinary.com/dslok1mwv/image/upload/v1495584133/moon_cjkodk.jpg")
+                    image_url: "https://res.cloudinary.com/dslok1mwv/image/upload/v1495584133/moon_cjkodk.jpg")
 
 beer15 = Beer.create(name: "Arrogant Bastard Ale", description: "This is an aggressive beer. You probably won’t like it. It is quite doubtful that you have the taste or sophistication to be able to appreciate an ale of this quality and depth.",
                     brewery: "Arrogant Brewing", abv: 7.2, ibu: 90, style: "Classified",
-                    image_url: "http://res.cloudinary.com/dslok1mwv/image/upload/v1495584435/bbaab_bottle_oh2e7k.png")
+                    image_url: "https://res.cloudinary.com/dslok1mwv/image/upload/v1495584435/bbaab_bottle_oh2e7k.png")
 
 beer16 = Beer.create(name: "805", description: "A light, refreshing blonde ale created for the California lifestyle. Subtle malt sweetness is balanced by a touch of hops, creating a versatile beer with a clean finish.",
                     brewery: "Firestone Walker", abv: 4.7, ibu: 20, style: "Blonde",
-                    image_url: "http://res.cloudinary.com/dslok1mwv/image/upload/v1495584783/805-Bottle_llpy4z.jpg")
+                    image_url: "https://res.cloudinary.com/dslok1mwv/image/upload/v1495584783/805-Bottle_llpy4z.jpg")
 
 beer17 = Beer.create(name: "Devil's Due", description: "The perfect balance of Retribution Imperial Stout and Devil’s Milk Barleywine, Devil’s Due is black, full-bodied, and smoothly drinkable. Its seductive swirl of dark chocolate, coffee, smoky malt, and citrus fruit flavors, infused with notes of charred oak, vanilla and caramelized sugar, disguises a strong, warming alcohol presence.",
                     brewery: "DuClaw Brewing Company", abv: 11, ibu: 75, style: "Stout",
-                    image_url: "http://res.cloudinary.com/dslok1mwv/image/upload/v1495585267/dd_u7vkt1.jpg")
+                    image_url: "https://res.cloudinary.com/dslok1mwv/image/upload/v1495585267/dd_u7vkt1.jpg")
 
 beer18 = Beer.create(name: "Point the Way IPA", description: "Point the Way IPA is an ode to the hop-crazed patrons of Los Angeles. Its light malt body elevates the pine and grapefruit notes courtesy of a generous hop dosing. This sessionable West-Coast IPA finishes dry for optimal repeatability.",
                     brewery: "Golden Road Brewing Company", abv: 5.9, ibu: 60, style: "IPA",
-                    image_url: "http://res.cloudinary.com/dslok1mwv/image/upload/v1495585446/ptw_gvlfxz.jpg")
+                    image_url: "https://res.cloudinary.com/dslok1mwv/image/upload/v1495585446/ptw_gvlfxz.jpg")
 
 beer19 = Beer.create(name: "Beach House", description: "Beach House Amber ale was created as a simple and clean, medium bodied ale.  It has subtle earthy notes in its malt character which are balanced by a light hop profile.  Perfect for a sunny day.",
                     brewery: "Strand Brewing Company", abv: 5, ibu: 45, style: "Amber Ale",
-                    image_url: "http://res.cloudinary.com/dslok1mwv/image/upload/v1495585736/beach_house_o9iitn.jpg")
+                    image_url: "https://res.cloudinary.com/dslok1mwv/image/upload/v1495585736/beach_house_o9iitn.jpg")
 
 beer20 = Beer.create(name: "Wolf Pup", description: "Hoppy and refreshing, Wolf Pup is a riff on a Session IPA. Highly drinkable with a wildly aromatic tropical and citrus character, it’s the perfect companion to keep on sippin’ for those long, sunny days.",
                     brewery: "Golden Road Brewing Company", abv: 4.5, ibu: 50, style: "Session IPA",
-                    image_url: "http://res.cloudinary.com/dslok1mwv/image/upload/v1495585611/wolfpup_gfkdvz.png")
+                    image_url: "https://res.cloudinary.com/dslok1mwv/image/upload/v1495585611/wolfpup_gfkdvz.png")
 
 beer21 = Beer.create(name: "Tangerine Express IPA", description: "This ain’t no just-add-juice approach. This one is for adults. Bountiful whole tangerine purée brings pithy, crisp bitterness to the citrus flavor. In addition to the complexities of the tangerine — the likes of which you can only get by using the whole fruit — it judiciously employs just a hint of whole pineapple for a backnote.",
                     brewery: "Stone Brewing Company", abv: 6.7, ibu: 75, style: "IPA",
-                    image_url: "http://res.cloudinary.com/dslok1mwv/image/upload/v1495586109/tangerine_eymwlr.jpg")
+                    image_url: "https://res.cloudinary.com/dslok1mwv/image/upload/v1495586109/tangerine_eymwlr.jpg")
 
 
 
