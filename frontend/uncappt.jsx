@@ -6,9 +6,6 @@ import {signout} from './actions/session_actions';
 import {requestAllBeer } from './actions/beer_actions';
 import {fetchAllCheckins} from './actions/checkin_actions';
 
-window.requestAllBeer = requestAllBeer;
-window.fetchAllCheckins = fetchAllCheckins;
-
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {
@@ -18,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
-  window.store = store;
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store}/>, root);
 });
