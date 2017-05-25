@@ -10,7 +10,9 @@ const LikesReducer = (state = initialState, action) => {
   let newState;
   switch(action.type){
     case CREATE_LIKE:
-      return action.like;
+      newState = merge({}, state);
+      newState.likes = action.like;
+      return newState;
 
     case DELETE_LIKE:
       newState = merge({}, state);

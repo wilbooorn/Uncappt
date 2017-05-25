@@ -72,8 +72,7 @@ class CheckinIndexItem extends React.Component{
         </div>
         <div className="bottom-checkin">
           {viewEditCheckin}
-          <LikeButtonContainer checkin={this.props.checkin}
-            usersWhoLike={this.props.usersWhoLike} user={this.props.currentUser}/>
+          <LikeButtonContainer checkin={this.props.checkin} user={this.props.currentUser}/>
         </div>
       </li>
     );
