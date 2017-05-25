@@ -5,6 +5,7 @@ class Checkin < ApplicationRecord
   belongs_to :user
   belongs_to :beer
   has_many :likes
+  has_many :user_likes, through: :likes, source: :user
 
   after_save :calculate_average!
 

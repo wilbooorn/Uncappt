@@ -20,3 +20,8 @@ export const selectAllCheckins = state => {
 export const selectBeerCheckins = (checkins, beerId) => {
     checkins.filter(checkin => checkin.beerId === beerId);
 };
+
+export const selectUsersWhoHaveLiked = state => {
+  return Object.keys(state.checkinInfo.checkins.user_likes)
+    .map(user => user.username);
+};

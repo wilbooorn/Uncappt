@@ -15,7 +15,6 @@ user6 = User.create(username: "Lily", password: "password", image_url: "https://
 user7 = User.create(username: "Blitz", password: "password", image_url: "https://res.cloudinary.com/dslok1mwv/image/upload/v1495489037/blitz_wngim3.png");
 
 
-
 beer1 = Beer.create(name: "Ruination", description: "Stone Ruination IPA was the first full-time brewed and bottled West Coast double IPA on the planet. Dry hopping and hop bursting squeeze every last drop of piney, citrusy, tropical essence from the hops",
                     brewery: "Stone Brewing Company", abv: 8.5, ibu: 100, style: "Double IPA",
                     image_url: "https://res.cloudinary.com/dslok1mwv/image/upload/v1495041225/rui_bottle_cvhbiz.png")
@@ -199,3 +198,5 @@ checkin24 = Checkin.create(user_id: user2.id, beer_id: beer20.id, rating: 5,
 
 checkin24 = Checkin.create(user_id: user1.id, beer_id: beer21.id, rating: 5,
                           review: "I’ve only ever been in love with a beer bottle and a mirror.")
+
+like1 = Like.create(user_id: user1.id, checkin_id: checkin24.id)

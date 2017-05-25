@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import Rating from 'react-rating';
+import LikeButtonContainer from '../like_button_container';
 
 class CheckinIndexItem extends React.Component{
   constructor(props){
@@ -69,7 +70,11 @@ class CheckinIndexItem extends React.Component{
           </div>
 
         </div>
-        {viewEditCheckin}
+        <div className="bottom-checkin">
+          {viewEditCheckin}
+          <LikeButtonContainer checkin={this.props.checkin}
+            usersWhoLike={this.props.usersWhoLike} user={this.props.currentUser}/>
+        </div>
       </li>
     );
   }

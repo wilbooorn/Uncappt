@@ -10,7 +10,9 @@ class Api::LikesController < ApplicationController
   end
 
   def destroy
-    @like = Like.find_by(id: params[:id])
+    @like = Like.find_by_user_id_and_checkin_id(params[:like][:user_id],
+                                                params[:like][:checkin_id])
+    @like.destroy
     render :show
   end
 
