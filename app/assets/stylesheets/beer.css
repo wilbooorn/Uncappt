@@ -186,7 +186,6 @@
   align-items: center;
 }
 
-
 .load-message {
   margin-bottom: 50px;
 }
@@ -195,6 +194,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+.no-beers-index-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .beer-show-container {
