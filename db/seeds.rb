@@ -200,3 +200,9 @@ checkin24 = Checkin.create(user_id: user1.id, beer_id: beer21.id, rating: 5,
                           review: "I’ve only ever been in love with a beer bottle and a mirror.")
 
 like1 = Like.create(user_id: user1.id, checkin_id: checkin24.id)
+like1 = Like.create(user_id: user1.id, checkin_id: checkin22.id)
+like1 = Like.create(user_id: user1.id, checkin_id: checkin21.id)
+like1 = Like.create(user_id: user1.id, checkin_id: checkin16.id)
+like1 = Like.create(user_id: user1.id, checkin_id: checkin11.id)
+like1 = Like.create(user_id: user1.id, checkin_id: checkin8.id)
+like1 = Like.create(user_id: user1.id, checkin_id: checkin7.id)
