@@ -4,6 +4,8 @@ class Checkin < ApplicationRecord
                                   message: "not valid" }
   belongs_to :user
   belongs_to :beer
+  has_many :likes
+  has_many :user_likes, through: :likes
 
   after_save :calculate_average!
 
