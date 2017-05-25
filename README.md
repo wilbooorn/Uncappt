@@ -1,24 +1,32 @@
-# README
+# UNCAPP'T
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[UNCAPP'T Live][uncappt]
 
-Things you may want to cover:
+[uncappt]: http://www.uncappt.com/#/
 
-* Ruby version
+Uncapp't is a full stack web application inspired by Untappd. Our mission is to unite beer connoisseurs everywhere in the lifelong quest to try the world's best beers. The app provides functionality to add new beers, "checkin" to a beer, and see what beers others are drinking globally.
 
-* System dependencies
+UNCAPP'T is built on a Ruby on Rails backend with a PostrgeSQL database, and a React.js/Redux frontend.
 
-* Configuration
+## Technologies Used
+* Ruby
+* Rails
+* Javascript
+* React.js
+* Redux
+* PostrgeSQL
+* Cloudinary API
 
-* Database creation
+## Features
 
-* Database initialization
+## User Authentication
 
-* How to run the test suite
+Authentication for Untapp'd is implemented both on the frontend and the backend. On the backend, user passwords are hashed and salted using BCrpyt to ensure no password data is stored or accessible. On the front end, all pages except the splash page are restricted to logged in users. When the DOM is fully loaded, the app checks for a current user set by Rails via session token. If there is no user logged in, all routes will be redirected to the splash page which contains the sign in and sign up forms, which are rendered as modals by the modal component.
 
-* Services (job queues, cache servers, search engines, etc.)
+![User Auth Ruby Code](https://res.cloudinary.com/dslok1mwv/image/upload/v1495731074/Screen_Shot_2017-05-25_at_9.50.38_AM_u8hkxs.png)
 
-* Deployment instructions
+## Beer Search
 
-* ...
+By default, all beers are displayed on the beers index page.
+
+![Search GIF](http://res.cloudinary.com/dslok1mwv/image/upload/v1495732288/search_cf0qdv.gif)
