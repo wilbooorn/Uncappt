@@ -3,14 +3,19 @@ import NavBarContainer from '../nav_bar_container';
 import BeerIndexItem from './beer_index_item';
 import {Link} from 'react-router-dom';
 import Footer from '../footer';
+import LoadingPage from '../loading_page';
 
 class BeersIndex extends React.Component {
   constructor(props){
     super(props);
+    this.state = {message: <LoadingPage />};
   }
 
   componentDidMount(){
     this.props.requestAllBeer();
+    setTimeout(() => {
+      this.setState({message:""});
+    }, 2000);
   }
 
   render(){
@@ -44,6 +49,7 @@ class BeersIndex extends React.Component {
             <div className="all-the-beers">
               <h1>All Beers</h1>
             </div>
+            {this.state.message}
             <div className="add-beer-show">
               <p className="dif-member">Can't find what you're looking for?</p>
               <Link className="link" to="/beers/new">Add Your Favorite Beer</Link>
