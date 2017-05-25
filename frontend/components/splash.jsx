@@ -23,7 +23,6 @@ class Splash extends React.Component{
 
   componentWillMount(){
     Modal.setAppElement('body');
-    console.log(Modal.defaultStyles);
     Modal.defaultStyles.content.border = "none";
     Modal.defaultStyles.content.background = "transparent";
     Modal.defaultStyles.overlay.backgroundColor = "rgba(255, 255, 255, 0.5)";

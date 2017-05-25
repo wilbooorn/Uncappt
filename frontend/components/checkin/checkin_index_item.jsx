@@ -57,8 +57,8 @@ class CheckinIndexItem extends React.Component{
             <div className="checkin-review">
               <p>{this.props.checkin.review}</p>
                 <Rating initialRate={this.props.checkin.rating} className="checkin-rating" readonly
-                  empty={<img src="http://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png" className="black-beer-show"/>}
-                  full={<img src="http://res.cloudinary.com/dslok1mwv/image/upload/v1495123297/udsqkscggkcla3h2aqhf.png" className="gold-beer-show"/>}
+                  empty={<img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png" className="black-beer-show"/>}
+                  full={<img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495123297/udsqkscggkcla3h2aqhf.png" className="gold-beer-show"/>}
                 />
             </div>
 

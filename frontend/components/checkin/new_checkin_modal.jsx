@@ -116,8 +116,8 @@ class NewCheckinModal extends React.Component {
 
           <h2 className="checkin-rating-title">Rating</h2>
           <Rating initialRate={this.placeholder} id="checkin-rating"
-            empty={<img src="http://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png" className="black-beer"/>}
-            full={<img src="http://res.cloudinary.com/dslok1mwv/image/upload/v1495123297/udsqkscggkcla3h2aqhf.png" className="gold-beer"/>}
+            empty={<img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495214139/bkwvbdxkybjgwtw0zplp.png" className="black-beer"/>}
+            full={<img src="https://res.cloudinary.com/dslok1mwv/image/upload/v1495123297/udsqkscggkcla3h2aqhf.png" className="gold-beer"/>}
             onChange={(rate) => this.rating(rate)}
           />
 
