@@ -3,7 +3,6 @@ class User < ApplicationRecord
 
   has_many :checkins, dependent: :destroy
   has_many :likes
-  has_many :checkin_likes, through: :likes
 
   validates :username, :password_digest, :session_token, presence: true
   validates :password, length: { minimum: 6 }, allow_nil: true

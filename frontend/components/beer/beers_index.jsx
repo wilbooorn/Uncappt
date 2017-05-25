@@ -48,8 +48,9 @@ class BeersIndex extends React.Component {
           <ul className="all-beers">
             <div className="all-the-beers">
               <h1>All Beers</h1>
+              {this.state.message}
             </div>
-            {this.state.message}
+
             <div className="add-beer-show">
               <p className="dif-member">Can't find what you're looking for?</p>
               <Link className="link" to="/beers/new">Add Your Favorite Beer</Link>

@@ -9,4 +9,3 @@ json.user @checkin.user
 json.beer @checkin.beer
 json.created_at @checkin.created_at
 json.likes @checkin.likes
-json.user_likes @checkin.user_likes
