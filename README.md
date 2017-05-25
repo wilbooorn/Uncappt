@@ -39,3 +39,9 @@ Post and delete comments on other users' checkins.
 
 ### Sorting
 Sort beers by various criteria, such as highest rated, or most checkins, and sort checkins by most likes, or time created.
+
+### Friendships
+Users can will friends and there will be a custom feed to only see friends' checkins, rather than global checkins. 
+
+### Badges
+Users can earn badges for different achievements, such as number of checkins, number of unique beers tried, etc.
