@@ -38,8 +38,6 @@
 | Path                            | Component            |
 |---------------------------------|----------------------|
 | "/"                             | "Splashpage"         |
-| "/signup"                       | "AuthFormContainer"  |
-| "/login"                        | "AuthFormContainer"  |
 | "/home"                         | "HomeContainer"      |
 | "/home/beers/"                  | "BeersContainer"     |
 | "/home/beers/:beer_id"          | "BeersContainer"     |

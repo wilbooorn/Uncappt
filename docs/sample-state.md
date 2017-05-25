@@ -9,13 +9,6 @@
     errors: []
   },
 
-  forms: {
-    signUp: {errors: []},
-    logIn: {errors: []},
-    createBeer: {errors: ["body can't be blank"]},
-    createCheckin: {errors: ["body can't be blank"]},
-  },
-
   beers: {
     1: {
       id: 1,
@@ -29,7 +22,7 @@
     }
   },
 
-  beer {
+  beer: {
     id: 1,
     name: "Watermelon Dorado",
     description: "Double IPA made with mash, kettle, and dry hopping blend to create a huge hop profile that is balanced with a blast of watermelon.",
@@ -49,6 +42,11 @@
       review: "This is the greatest beverage I have ever consumed",
       image_url: "image/url.com"
     }
+  }
+
+  like: {
+    user_id: 1,
+    checkin_id: 2
   }
 }
 
