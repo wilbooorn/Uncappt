@@ -18,7 +18,7 @@ class BeersIndex extends React.Component {
       this.setState({message:""});
     }, 2000);
   }
-
+ 
   render(){
     let beers;
     if (this.props.beers[0]){
