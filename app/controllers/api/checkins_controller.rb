@@ -5,7 +5,7 @@ class Api::CheckinsController < ApplicationController
   end
 
   def show
-    @checkin = Checkin.find_by(id: params[:id])
+    @checkin = Checkin.includes(:beer, :user, :likes, :user_likes).find_by(id: params[:id])
   end
 
   def create
@@ -18,7 +18,7 @@ class Api::CheckinsController < ApplicationController
   end
 
   def index
-    @checkins = Checkin.includes(:beer, :user, :likes).all
+    @checkins = Checkin.includes(:beer, :user, :likes, :user_likes).all
   end
 
   def edit

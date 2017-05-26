@@ -15,7 +15,7 @@ class Api::UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by(id: params[:id])
+    @user = User.includes(:checkins, :likes, :checkin_likes).find_by(id: params[:id])
   end
 
   def update
