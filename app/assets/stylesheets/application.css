@@ -131,6 +131,7 @@
   align-content: center;
   justify-content: space-between;
   min-width: 200px;
+  min-height: 400px;
 }
 
 .sign-in-buttons {
