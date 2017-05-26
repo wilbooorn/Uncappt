@@ -4,6 +4,8 @@
 
 [uncappt]: http://www.uncappt.com/#/
 
+![Profile Page](https://res.cloudinary.com/dslok1mwv/image/upload/v1495839167/profile_p8alf5.png)
+
 Uncapp't is a full stack web application inspired by Untappd. Our mission is to unite beer connoisseurs everywhere in the lifelong quest to try the world's best beers. The app provides functionality to add new beers, "checkin" to a beer, and say "cheers" to beers others are drinking globally.
 
 UNCAPP'T is built on a Ruby on Rails backend with a PostrgeSQL database, and a React.js/Redux frontend.
@@ -27,7 +29,14 @@ Authentication for Untapp'd is implemented both on the frontend and the backend.
 
 ### Beer Search
 
-By default, all beers are displayed on the beers index page. The beers index page features a magnifying glass that, when clicked, reveals a search field. Using the PG Search gem and a custom search query attached to an AJAX call to the server, beers can be searched by either their name, or their brewery's name. The beers displayed on the beers index will update with records that match the search query.
+By default, all beers are displayed in alphabetical order on the beers index page. The beers index page features a magnifying glass that, when clicked, reveals a search field. Using the PG Search gem and a custom search query attached to an AJAX call to the server, beers can be searched by either their name, or their brewery's name.
+
+
+![Beers Controller](https://res.cloudinary.com/dslok1mwv/image/upload/v1495838560/Screen_Shot_2017-05-26_at_3.42.16_PM_kutjna.png)
+
+* The `BeersController` checks to see if there is a search query present in the params. If so, the beers displayed on the beers index will update with records that match the search query by calling the search_by_name method defined in the `Beer` model
+
+![Beers Model](https://res.cloudinary.com/dslok1mwv/image/upload/v1495838788/Screen_Shot_2017-05-25_at_1.58.04_PM_cq2pu7.png)
 
 ![Search GIF](http://res.cloudinary.com/dslok1mwv/image/upload/dl_70/v1495745271/search_yd7kpu.gif)
 
