@@ -41,10 +41,14 @@ class SignInForm extends React.Component {
   }
 
   render(){
+    let errors;
+    if(this.props.errors){
+      errors = this.props.errors.join(", ");
+    }
     return (
       <form className="sign-in-form">
         <h1 className="sign-in-title">UNCAPP'T</h1>
-        <h3 className="errors">{this.props.errors}</h3>
+        <h3 className="errors">{errors}</h3>
 
         <input type="text" id="signin-username"
           value={this.state.username}
