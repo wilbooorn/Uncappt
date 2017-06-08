@@ -56,6 +56,10 @@ class SignUpForm extends React.Component {
 
 
   render(){
+    let errors;
+    if(this.props.errors){
+      errors = this.props.errors.join(", ");
+    }
     let image = <div></div>;
     if (this.state.image_url !== ""){
       image = <img className="signup-image" src={this.state.image_url} />;
@@ -63,7 +67,7 @@ class SignUpForm extends React.Component {
     return (
       <form className="sign-up-form">
         <h1 className="sign-in-title">UNCAPP'T</h1>
-        <h3 className="errors">{this.props.errors.join(", ")}</h3>
+        <h3 className="errors">{errors}</h3>
 
         <input type="text" id="signup-username"
           value={this.state.username}
