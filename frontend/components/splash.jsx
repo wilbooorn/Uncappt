@@ -66,7 +66,7 @@ class Splash extends React.Component{
       <div className="splash">
         <div className="title">
           <h1 className="logo">UNCAPP'T</h1>
-          <h4 className="tagline">Happy Hour. Every Hour.</h4>
+          <h4 className="tagline">What did you drink today?</h4>
         </div>
 
         <div className="buttons">
