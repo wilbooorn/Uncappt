@@ -123,7 +123,7 @@ class NewCheckinModal extends React.Component {
 
           <input type="text" id="checkin-location"
             value={this.state.location} onChange={this.location}
-            placeholder="Where'd you try it?" />
+            placeholder=" Where'd you try it?" />
 
           <div className="new-beer-image-container">
             <UploadButton postImage={this.postImage} text={this.photoText}/>
