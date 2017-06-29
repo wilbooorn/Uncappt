@@ -2,9 +2,9 @@
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 
-# Beer.destroy_all
+Beer.destroy_all
 User.destroy_all
-# Checkin.destroy_all
+Checkin.destroy_all
 
 user1 = User.create(username: "Guest", password: "password", image_url: "https://res.cloudinary.com/dslok1mwv/image/upload/v1498752271/man_ubgwbx.png");
 user2 = User.create(username: "Ted", password: "password", image_url: "https://res.cloudinary.com/dslok1mwv/image/upload/v1495146369/ted_zmpiyd.jpg");
