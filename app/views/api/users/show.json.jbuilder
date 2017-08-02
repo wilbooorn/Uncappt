@@ -16,4 +16,5 @@ json.checkins(@user.checkins) do |checkin|
   json.beer checkin.beer
   json.likes checkin.likes
   json.user_likes checkin.user_likes
+  json.created_at checkin.created_at
  end

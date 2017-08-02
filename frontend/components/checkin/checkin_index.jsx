@@ -16,8 +16,12 @@ class CheckinIndex extends React.Component {
     let checkins;
     if (this.props.beerCheckins){
       checkins = this.props.beerCheckins.map((checkin, idx) =>(
-        <CheckinIndexItemContainer history={this.props.history} key={idx} checkin={checkin} />
-      ));
+        <CheckinIndexItemContainer history={this.props.history}
+                                   key={idx} checkin={checkin} />
+      ))
+      .sort((a, b) =>
+        new Date(b.props.checkin.created_at) - new Date(a.props.checkin.created_at)
+      );
       return (
         <div className="checkin-list-container">
           <ul className="checkin-list">
@@ -32,8 +36,12 @@ class CheckinIndex extends React.Component {
     else if(this.props.checkins[0]){
       if(this.props.checkins[0].id){
         checkins = this.props.checkins.map((checkin, idx) =>(
-          <CheckinIndexItemContainer history={this.props.history} key={idx} checkin={checkin} />
-        ));
+          <CheckinIndexItemContainer history={this.props.history}
+                                     key={idx} checkin={checkin} />
+        ))
+        .sort((a, b) =>
+          new Date(b.props.checkin.created_at) - new Date(a.props.checkin.created_at)
+        );
         return (
           <div className="checkin-list-container">
             <ul className="checkin-list">
