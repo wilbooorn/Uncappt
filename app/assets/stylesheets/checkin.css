@@ -4,10 +4,11 @@
   justify-content: center;
 }
 
-.all-the-checkins > h1 {
+.all-the-checkins > h1, .no-checkin-header {
   font-size: 38px;
   font-weight: bold;
-  margin: 30px;
+  margin: 30px auto;
+
 }
 
 .checkin-info {
@@ -160,4 +161,8 @@
   justify-content: space-between;
   align-items: center;
   align-content: center;
+}
+
+ {
+
 }

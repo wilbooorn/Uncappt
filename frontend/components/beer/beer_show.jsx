@@ -31,12 +31,19 @@ class BeerShow extends React.Component {
   }
 
   render(){
+    let checkinInfo;
+
     if(this.props.beer.name){
+      if (this.props.beer.checkins[0]){
+        checkinInfo = <CheckinIndexContainer beerCheckins={this.props.beer.checkins} />;
+      } else {
+        checkinInfo = <h3 className="no-checkin-header">No Checkins Yet</h3>;
+      }
       return (
         <div className="beer-show-container">
           <NavBarContainer history={this.props.history}/>
           <BeerIndexItem page="show" deleteBeer={this.props.deleteBeer} beer={this.props.beer} history={this.props.history} />
-          <CheckinIndexContainer beerCheckins={this.props.beer.checkins.reverse()} />
+          {checkinInfo}
           <Link className="back-to-beers" to="/beers">Back to All Beers</Link>
           <Footer />
         </div>
