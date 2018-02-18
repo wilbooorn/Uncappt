@@ -4,11 +4,12 @@
   background-color: #FFBE00;
   height: 50px;
   align-items: center;
-  padding: 10px 150px 10px 150px;
+  padding: 10px 10% 10px 10%;
   margin: 0;
   color: white;
   box-shadow: 0 3px 8px 0px rgba(0,0,0,0.5);
   z-index: 999;
+  min-width: 400px;
 }
 
 .nav-title {
@@ -35,7 +36,6 @@
   justify-content: flex-end;
   align-items: center;
   position: relative;
-  margin-left: 10px;
 }
 
 .nav-explore {
